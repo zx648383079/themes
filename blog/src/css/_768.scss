@@ -1,0 +1,60 @@
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .page-box {
+        padding: 0;
+        background-color: white;
+        border-radius: 0;
+        box-shadow: none;
+        margin: 0;
+        position: relative;
+    }
+
+    .header {
+        background-color: #04b4e0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 380px;
+        text-align: center;
+        padding: 70px 30px 45px;
+        overflow-y: auto;
+        .menu-bar {
+            margin: 30px 0;
+            list-style: none;
+            a {
+                display: block;
+                color: #fff;
+                padding: 12px 0;
+                line-height: 21px;
+                opacity: .7;
+            }
+            .fa {
+                display: none;
+            }
+            .active {
+                a {
+                    opacity: 1;
+                }
+            }
+        }
+        .copyright {
+            right: 0;
+            width: 100%;
+            position: relative;
+            margin-top: 30px;
+        }
+    }
+    
+    .menu-toggle {
+        display: none;
+    }
+    .nav-action {
+        display: none;
+    }
+
+    .animate-section {
+        border-radius: 0;
+        height: 100vh;
+        padding: 20px;
+    }
+}
