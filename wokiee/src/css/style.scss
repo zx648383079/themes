@@ -17,17 +17,34 @@ a:hover {
     .metro-item {
         position: relative;
         display: block;
+        overflow: hidden;
         img {
             width: 100%;
+            transition: 1s all;
         }
-        .metro-label {
+        .metro-flex {
             position: absolute;
             top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+        .metro-label {
             padding: 13px 39px 11px;
             background-color: #fff;
             border: 1px solid #ccc;
+            text-align: center;
+            display: inline-block;
         }
         &:hover {
+            img {
+                transform: scale(1.2);
+            }
             .metro-label {
                 background: rgba(40, 121, 254, 0.9);
                 border: 2px solid rgba(25, 25, 25, 0);
@@ -41,6 +58,68 @@ a:hover {
         &:nth-of-type(6) {
             grid-column: 3 / 5;
             grid-row: 2 / 3;
+        }
+    }
+}
+
+.title-bar {
+    text-align: center;
+    padding: 40px 0 0;
+}
+
+.service-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 0;
+    .service-item {
+        i {
+            margin-right: 17px;
+            font-size: 35px;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            padding-top: 6px;
+        }
+        span {
+            vertical-align: super;
+        }
+    }
+}
+
+.activity-box {
+    .activity-item {
+        position: relative;
+        display: block;
+        overflow: hidden;
+        img {
+            width: 100%;
+            transition: 1s all;
+        }
+        &:hover {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+    .item-flex {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        .item-label {
+            display: inline-block;
+            padding: 13px 39px 11px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            text-align: center;
         }
     }
 }
@@ -250,5 +329,67 @@ a:hover {
             font-size: 24px;
             color: #777;
         }
+    }
+}
+
+.join-bar {
+    background: #2879fe;
+    color: #ffffff;
+    padding: 10px 0;
+    line-height: 40px;
+    .title {
+        display: inline-block;
+    }
+    .flex-input {
+        display: inline-flex;
+        flex-direction: row;
+        .form-control {
+            border-bottom-right-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .btn {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            word-break: keep-all;
+        }
+    }
+    .bar-right {
+        float: right;
+        a {
+            color: #fff;
+        }
+        .fab {
+            font-size: 24px;
+        }
+    }
+}
+
+.m-collapse-box {
+    margin-top: 54px;
+    .collapse-title {
+        line-height: 30px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .collapse-body {
+        color: #888888;
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+}
+
+.footer {
+    .map-bar {
+        padding-bottom: 53px;
+        background-color: #f7f8fa;
+    }
+    .copyright {
+        padding: 10px 0;
+        text-align: center;
     }
 }

@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "vue2mini",
-    "start": "vue2mini watch"
+    "start": "vue2mini --watch"
   },
   "author": "zodream",
   "license": "MIT",
