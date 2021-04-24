@@ -4,18 +4,17 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vue2mini",
-    "start": "vue2mini --watch"
+    "build": "vue2mini --theme",
+    "start": "vue2mini --theme --watch"
   },
   "author": "zodream",
   "license": "MIT",
   "devDependencies": {
-    "chokidar": "^3.4.0",
-    "gulp-vue2mini": "^1.1.1",
-    "node-sass": "^4.14.1",
-    "typescript": "^3.9.5"
+    "chokidar": "^3.5.1",
+    "gulp-vue2mini": "^1.1.15",
+    "typescript": "^4.2.4"
   },
   "dependencies": {
-    "@types/jquery": "^3.5.0"
+    "@types/jquery": "^3.5.5"
   }
 }
