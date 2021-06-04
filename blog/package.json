@@ -11,8 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "chokidar": "^3.5.1",
-    "gulp-vue2mini": "^1.1.15",
-    "typescript": "^4.2.4"
+    "gulp-vue2mini": "^1.1.19",
+    "typescript": "^4.3.2"
   },
   "dependencies": {
     "@types/jquery": "^3.5.5"

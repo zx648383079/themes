@@ -9,8 +9,8 @@
 }
 
 /*
-   * Scrollbar rail styles
-   */
+* Scrollbar rail styles
+*/
 
 .ps__rail-x {
     display: none;
@@ -57,7 +57,6 @@
 }
 
 .ps--focus> {
-
     .ps__rail-x,
     .ps__rail-y {
         opacity: 0.6;
@@ -70,14 +69,13 @@
 }
 
 .ps {
-
     .ps__rail-x:hover,
     .ps__rail-y:hover,
     .ps__rail-x:focus,
     .ps__rail-y:focus,
     .ps__rail-x.ps--clicking,
     .ps__rail-y.ps--clicking {
-        background-color: #eee;
+        background-color: @primary;
         opacity: 0.9;
     }
 }
@@ -86,9 +84,12 @@
    * Scrollbar thumb styles
    */
 
-.ps__thumb-x {
-    background-color: #aaa;
+.ps__thumb-x,
+.ps__thumb-y {
+    background-color: @secondary;
     border-radius: 6px;
+}
+.ps__thumb-x {
     transition: background-color .2s linear, height .2s ease-in-out;
     height: 6px;
 
@@ -100,8 +101,6 @@
 }
 
 .ps__thumb-y {
-    background-color: #aaa;
-    border-radius: 6px;
     transition: background-color .2s linear, width .2s ease-in-out;
     width: 6px;
 
@@ -113,11 +112,10 @@
 }
 
 .ps__rail-x {
-
     &:hover>.ps__thumb-x,
     &:focus>.ps__thumb-x,
     &.ps--clicking .ps__thumb-x {
-        background-color: #999;
+        background-color: @hover;
         height: 11px;
     }
 }
@@ -127,7 +125,7 @@
     &:hover>.ps__thumb-y,
     &:focus>.ps__thumb-y,
     &.ps--clicking .ps__thumb-y {
-        background-color: #04b4e0;
+        background-color: @hover;
         width: 8px;
     }
 }

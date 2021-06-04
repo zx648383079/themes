@@ -1,5 +1,5 @@
 $(function() {
-    const pages = ['#blog', '#link', '#about', '#resume', '#portfolio','#detail'];
+    const pages = ['#blog', '#link', '#about', '#resume', '#portfolio','#detail', '#nav'];
     pages.forEach(item => {
         new PerfectScrollbar(item, {
             wheelSpeed: 2,
@@ -9,58 +9,32 @@ $(function() {
     })
     const animates = [
         ['backInDown', 'backOutDown'],
-        ['backInLeft', 'backOutLeft'],
-        ['backInRight', 'backOutRight'],
-        ['backInUp', 'backOutUp'],
         ['bounceIn', 'bounceOut'],
-        ['bounceInDown', 'bounceOutDown'],
-        ['bounceInLeft', 'bounceOutLeft'],
-        ['bounceInRight', 'bounceOutRight'],
-        ['bounceInUp', 'bounceOutUp'],
         ['fadeIn', 'fadeOut'],
         ['fadeInDown', 'fadeOutDown'],
         ['fadeInDownBig', 'fadeOutDownBig'],
-        ['fadeInLeft', 'fadeOutLeft'],
-        ['fadeInLeftBig', 'fadeOutLeftBig'],
-        ['fadeInRight', 'fadeOutRight'],
-        ['fadeInRightBig', 'fadeOutRightBig'],
-        ['fadeInUp', 'fadeOutUp'],
-        ['fadeInUpBig', 'fadeOutUpBig'],
-        ['fadeInTopLeft', 'fadeOutTopLeft'],
-        ['fadeInTopRight', 'fadeOutTopRight'],
-        ['fadeInBottomLeft', 'fadeOutBottomLeft'],
-        ['fadeInBottomRight', 'fadeOutBottomRight'],
         ['flipInX', 'flipOutX'],
         ['flipInY', 'flipOutY'],
-        ['lightSpeedInRight', 'lightSpeedOutRight'],
-        ['lightSpeedInLeft', 'lightSpeedOutLeft'],
         ['rotateIn', 'rotateOut'],
-        ['rotateInDownLeft', 'rotateOutDownLeft'],
-        ['rotateInDownRight', 'rotateOutDownRight'],
-        ['rotateInUpLeft', 'rotateOutUpLeft'],
-        ['rotateInUpRight', 'rotateOutUpRight'],
         ['rollIn', 'rollOut'],
         ['zoomIn', 'zoomOut'],
         ['zoomInDown', 'zoomOutDown'],
         ['zoomInLeft', 'zoomOutLeft'],
         ['zoomInRight', 'zoomOutRight'],
-        ['zoomInUp', 'zoomOutUp'],
         ['slideInDown', 'slideOutDown'],
         ['slideInLeft', 'slideOutLeft'],
-        ['slideInRight', 'slideOutRight'],
-        ['slideInUp', 'slideOutUp'],        
     ];
 
     function runAnimate(inEle: JQuery, outEle: JQuery) {
         const item = animates[Math.floor(Math.random() * animates.length)];
         const inEnd = () => {
-            inEle.unbind('animationend', inEnd).removeClass('animate__animated animate__' + item[0]);
+            inEle.off('animationend', inEnd).removeClass('animate__animated animate__' + item[0]);
         };
         const outEnd = () => {
-            outEle.unbind('animationend', outEnd).removeClass('active animate__animated animate__' + item[1]);
+            outEle.off('animationend', outEnd).removeClass('active animate__animated animate__' + item[1]);
         };
-        inEle.bind('animationend', inEnd).addClass('active animate__animated animate__' + item[0]);
-        outEle.bind('animationend', outEnd).addClass('animate__animated animate__' + item[1])
+        inEle.on('animationend', inEnd).addClass('active animate__animated animate__' + item[0]);
+        outEle.on('animationend', outEnd).addClass('animate__animated animate__' + item[1])
     }
 
     function goSection(href: string, menuHref: string = href) {
@@ -74,7 +48,7 @@ $(function() {
         });
         let inEle;
         let outEle;
-        const current = href.substr(1);
+        const current = href ? href.substr(1) : '';
         $('.page-area .animate-section').each(function() {
             let $this = $(this);
             const isActive = $this.attr('id') === current;

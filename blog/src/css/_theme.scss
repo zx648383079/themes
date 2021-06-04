@@ -1,8 +1,111 @@
-$headerBg: #04b4e0;
-$headerFg: #fff;
-$bg: #fff;
-$overBg: #fff;
-$shadow: rgba(0, 0, 0, .25);
-$remarkFg: #888;
-$menuFg: #b5b6b7;
-$activeFg: $headerBg;
+@theme default {
+    primary: #04b4e0;
+    primaryText: #fff;
+
+    secondary: #f2f2f2;
+    secondaryText: #999;
+
+    body: #fff;
+    bodyText: #333;
+    bodysecondaryText: #666;
+
+    hover: #404040;
+    hoverText: white;
+
+    active: #454545;
+    activeText: white;
+
+    dialog: white;
+    dialogText: #888;
+
+    button: transparent;
+    buttonText: #666;
+    buttonBorder: #04b4e0;
+    buttonHoverText:  white;
+    buttonHover: #04b4e0;
+
+    linkText: #43a1e1;
+
+    shadow: rgba(0, 0, 0, .25);
+    disable: #ababaa;
+
+    input: transparent;
+    inputTextIcon: white;
+    inputText: #333;
+    inputLabel: #929292;
+    inputBorder: #04b4e0;
+    inputFocusBorder: #808080;
+    inputFocusShadow: 0 0 0 1px #808080 inset;
+
+    nav: white;
+    navText: #b5b6b7;
+    navActiveText: #04b4e0;
+    navPop: #04b4e0;
+    navPopText: white;
+
+    titleText: #333;
+    titleStrongText: #04b4e0;
+
+    copyright: #f2f2f2;
+    copyrightText: #999;
+
+    icon: #04b4e0;
+
+    tag: #04b4e0;
+    tagText: #fff;
+}
+@theme dark {
+    primary: #2e2e2e;
+    primaryText: #eee;
+    secondary: #333;
+    secondaryText: white;
+
+    body: #333;
+    bodyText: white;
+    bodysecondaryText: #929292;
+
+    hover: #404040;
+    hoverText: white;
+
+    active: #454545;
+    activeText: white;
+
+    dialog: #3b3b3b;
+    dialogText: white;
+
+    button: transparent;
+    buttonText: #929292;
+    buttonBorder: #6B6B6B;
+    buttonHoverText: white;
+    buttonHover: #404040;
+
+    linkText: #43a1e1;
+
+    shadow: rgba(255, 255, 255, .25);
+    disable: #ababaa;
+
+    input: #2b2b2b;
+    inputTextIcon: white;
+    inputText: white;
+    inputLabel: #929292;
+    inputBorder: #6B6B6B;
+    inputFocusBorder: #808080;
+    inputFocusShadow: 0 0 0 1px #808080 inset;
+
+    nav: #2e2e2e;
+    navText: #929292;
+    navActiveText: white;
+    navPop: #404040;
+    navPopText: white;
+
+    titleText: #929292;
+    titleStrongText: white;
+
+    copyright: #404040;
+    copyrightText: #929292;
+
+    icon: #929292;
+
+    tag: #404040;
+    tagText: #929292;
+}
