@@ -1,0 +1,67 @@
+@layouts/main2
+@title=视频详情页
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="player-box">
+                <video id="video-player" class="video-js vjs-big-play-centered vjs-fluid" controls preload="none" src="https://vjs.zencdn.net/v/oceans.mp4"></video>
+                <div class="player-title">视频标题</div>
+                <div class="byline">
+                    <div class="like-count">
+                        <i class="fa fa-heart"></i>
+                        1.5w
+                    </div>
+                    <div class="comment-count">
+                        <i class="fa fa-comment"></i>
+                        1.5w
+                    </div>
+                    <div class="share-count">
+                        <i class="fa fa-share"></i>
+                        分享
+                    </div>
+                    <div class="date">5天前</div>
+                </div>
+            </div>
+            <div class="comment-header">
+                全部评论
+            </div>
+            <div class="comment-list">
+                @layouts/comment@4
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="author-bar">
+                <div class="avatar">
+                    <img src="https://zodream.cn/assets/images/zx.jpg" alt="">
+                </div>
+                <div class="info">
+                    <div class="name">zodream</div>
+                    <div class="meta">
+                        <div class="follow-count">
+                            粉丝
+                            <span>1.5w</span>
+                        </div>
+                        <div class="like-count">
+                            获赞
+                            <span>1.5w</span>
+                        </div>
+                    </div>
+                    <div class="btn btn-like">
+                        <i class="fa fa-plus"></i>
+                        关注
+                    </div>
+                </div>
+            </div>
+            <div class="title-bar">
+                推荐视频
+            </div>
+            <div class="more-box">
+                @layouts/item3@10
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var player = videojs('video-player');
+</script>

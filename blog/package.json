@@ -10,9 +10,9 @@
   "author": "zodream",
   "license": "MIT",
   "devDependencies": {
-    "chokidar": "^3.5.1",
-    "gulp-vue2mini": "^1.1.19",
-    "typescript": "^4.3.2"
+    "chokidar": "^3.5.2",
+    "gulp-vue2mini": "^1.2.0",
+    "typescript": "^4.3.4"
   },
   "dependencies": {
     "@types/jquery": "^3.5.5"
