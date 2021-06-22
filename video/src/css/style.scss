@@ -1,26 +1,27 @@
 @import "theme";
 
 body {
-    background-color: $bg;
+    background-color: @body;
+    color: @bodyText;
 }
 
 a {
-    color: #333;
+    color: @linkText;
     text-decoration: none;
     transition: .1s ease-in-out;
     &:link,
     &:visited {
-        color: #333;
+        color: @linkText;
     }
 }
 
 .header {
     .top-bar {
-        background: #fff;
-        border-bottom: 1px solid #ddd \9;
+        background: @body;
+        border-bottom: 1px solid @shadow;
         display: block;
         height: 32px;
-        box-shadow: 0 2px 4px 0 #d9d9d9;
+        box-shadow: 0 2px 4px 0 @shadow;
         margin-bottom: 20px;
         a {
             display: inline-block;
@@ -29,21 +30,21 @@ a {
             padding: 0 20px 0 0;
             text-align: center;
             font-size: 12px;
-            color: #999;
+            color: @bodySecondaryText;
             &:hover {
-                color: #333;
+                color: @hoverText;
                 text-decoration: none;
             }
         }
     }
     .title-bar {
-        color: #000;
+        color: @titleText;
         margin-bottom: 20px;
         h2 {
             display: inline-block;
         }
         span {
-            color: #d4d4d4;
+            color: @titleSecondaryText;
         }
     }
     .menu-box {
@@ -51,12 +52,13 @@ a {
     }
     .navbar {
         padding: 0;
-        background: #363636;
+        background: @nav;
+        color: @navText;
         .nav-item {
             &:hover {
-                background-color: #000;
+                background-color: @navHover;
                 .nav-link {
-                    color: #fff;
+                    color: @navHoverText;
                 }
             }
         }
@@ -64,11 +66,23 @@ a {
             padding: 15px 20px;
         }
     }
+    .dropdown-menu {
+        background-color: @secondary;
+        color: @secondaryText;
+    }
+    .btn-default {
+        border-color: @secondaryText;
+        color: @secondaryText;
+        &:hover {
+            background-color: @secondaryText;
+            color: @secondary;
+        }
+    }
 }
 
 .header-large {
-    height: 5.5rem;
-    background-color: white;
+    background-color: @primary;
+    color: @primaryText;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -84,10 +98,10 @@ a {
 }
 
 .footer {
-    background: $headerBg;
+    background: @primary;
+    color: @primaryText;
     padding: 20px 0 15px 0;
     margin-top: 1.875em;
-    color: #888;
 }
 
 .main-box {
@@ -180,7 +194,7 @@ a {
     }
     .byline {
         font-size: 12px;
-        color: #999;
+        color: @bodySecondaryText;
         white-space: nowrap;
         text-overflow: ellipsis;
         position: relative;
@@ -197,7 +211,7 @@ a {
 }
 
 .detail-box {
-    background-color: #fff;
+    background-color: @bodySecondary;
     margin-bottom: .75rem;
     .thumb {
         position: relative;
@@ -256,12 +270,12 @@ a {
     }
     .byline {
         padding: 10px 0;
-        border-top: #000 solid 5px;
+        border-top: @tag solid 5px;
         line-height: 1.5em;
-        color: #999;
+        color: @bodySecondaryText;
         font-size: 12px;
         a {
-            color: #999;
+            color: @bodySecondaryText;
         }
         .date,
         .category,
@@ -272,9 +286,9 @@ a {
     }
     .book-copyright {
         clear: both;
-        background-color: #f2f2f2;
+        background-color: @copyright;
         font-size: 12px;
-        color: #999;
+        color: @copyrightText;
         padding: 6px 15px 5px;
         border-radius: 2px;
         text-align: center;
@@ -325,13 +339,14 @@ a {
 }
 
 .btn-default {
-    border: solid 1px #333;
+    border: solid 1px @primary;
     padding: 6px 12px;
     margin-right: 12px;
     border-radius: 0;
+    color: @primary;
     &:hover {
-        background-color: #333;
-        color: #fff;
+        background-color: @primary;
+        color: @primaryText;
     }
 }
 
@@ -342,7 +357,7 @@ a {
 .side-bar {
     margin-top: 3em;
     .panel-header {
-        border-bottom: #000 solid 3px;
+        border-bottom: 3px solid @primary;
         h3 {
             font-size: 15px;
         }
@@ -350,7 +365,7 @@ a {
 }
 
 .panel {
-    background-color: #fff;
+    background-color: @bodySecondary;
     padding: 15px 10px 15px;
     margin-bottom: .75rem;
     .panel-header {
@@ -374,14 +389,15 @@ a {
         display: inline-block;
         &.active {
             .page-link {
-                background-color: #333;
-                border-color: #333;
-                color: #fff
+                background-color: @primary;
+                border-color: @primary;
+                color: @primaryText;
             }
         }
     }
     .page-link {
-        color: #333;
+        color: @bodyText;
+        background-color: @body;
     }
 }
 
@@ -389,8 +405,8 @@ a {
     position: relative;
     margin-bottom: .75em;
     .comment {
-        background: #fff;
-        box-shadow: 0 0 2px 0 rgba(58,58,58,.2);
+        background: @bodySecondary;
+        box-shadow: 0 0 2px 0 @shadow;
         padding: 15px 10px;
     }
     .comment-content {
@@ -427,7 +443,7 @@ a {
     }
     .children {
         padding-left: 1.5em;
-        border-left: solid 1px #d4d4d4;
+        border-left: solid 1px @bodySecondary;
         margin: .75em 0;
     }
 }
@@ -436,13 +452,15 @@ a {
     .tab-header {
         a {
             padding: 6px 12px;
-            color: #fff;
+            color: @tabText;
             display: block;
-            background-color: #0a0a0a;
+            background-color: @tab;
             float: left;
+            text-decoration: none;
             &.active,
             &:hover {
-                background-color: #2b618e;
+                background-color: @tabActive;
+                color: @tabActiveText;
             }
         }
         &::after {
@@ -482,7 +500,7 @@ a {
     position: relative;
     padding: 5px 10px;
     text-align: center;
-    border: 1px solid #eee;
+    border: 1px solid @tabBorder;
     border-radius: 5px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -525,17 +543,17 @@ a {
         margin-right: 16px;
         cursor: pointer;
         pointer-events: auto;
-        background: #fff;
-        border: 1px solid rgba(0,0,0,.1);
+        background: @tab;
+        border: 1px solid @tabBorder;
         border-radius: 100px;
-        color: rgba(47,48,53,.9);
+        color: @tabText;
         display: flex;
         justify-content: center;
         min-width: 72px;
         padding: 5px 16px;
         &.active {
-            border-color: #fe2c55;
-            color: #fe2c55;
+            border-color: @tabActiveBorder;
+            color: @tabActiveText;
         }
     }
     .video-item {
@@ -646,6 +664,7 @@ a {
 .title-bar {
     margin-top: 2em;
     font-size: 1.2em;
+    color: @titleText;
 }
 
 .video-simple-item {
@@ -693,14 +712,5 @@ a {
     }
 }
 
-@media only screen and (max-width: 767px) {
-    .items-box {
-        column-count: 3;
-    }
-}
-
-@media only screen and (max-width: 576px) {
-    .items-box {
-        column-count: 2;
-    }
-}
+@import '0';
+@import '767';

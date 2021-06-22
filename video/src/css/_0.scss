@@ -1,0 +1,27 @@
+.items-box {
+    column-count: 2;
+}
+
+.header-large {
+    .brand-logo {
+        display: inline-block;
+        img {
+            max-width: 20vw;
+            max-height: 3em;
+        }
+    }
+    .flat-input {
+        flex: 1;
+        max-width: 18.75rem;
+        .fa {
+            line-height: 1.5;
+        }
+    }
+    .btn {
+        padding: .375rem .3rem;
+        font-size: .8rem;
+        .fa {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@media only screen and (min-width: 769px) {
+    .items-box {
+        column-count: 4;
+    }
+    
+    .header-large {
+        height: 5.5rem;
+        .brand-logo {
+            display: inline-block;
+            img {
+                max-height: 4em;
+            }
+        }
+        .btn {
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            .fa {
+                display: inline-block;
+            }
+        }
+    }
+}

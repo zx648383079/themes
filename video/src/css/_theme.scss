@@ -1,8 +1,192 @@
-$headerBg: #242424;
-$headerFg: #fff;
-$bg: #f4f4f4;
-$overBg: #fff;
-$shadow: rgba(0, 0, 0, .25);
-$remarkFg: #888;
-$menuFg: #b5b6b7;
-$activeFg: $headerBg;
+@theme default {
+    primary: #04b4e0;
+    primaryText: #fff;
+
+    secondary: #f2f2f2;
+    secondaryText: #999;
+
+    body: #fff;
+    bodyText: #333;
+    bodySecondary: #f4f4f4;
+    bodySecondaryText: #666;
+
+    hover: #404040;
+    hoverText: white;
+
+    active: #454545;
+    activeText: white;
+
+    dialog: white;
+    dialogText: #888;
+
+    button: transparent;
+    buttonText: #666;
+    buttonBorder: #04b4e0;
+    buttonHoverText:  white;
+    buttonHover: #04b4e0;
+
+    linkText: #43a1e1;
+
+    shadow: rgba(0, 0, 0, .25);
+    disable: #ababaa;
+
+    input: transparent;
+    inputTextIcon: white;
+    inputText: #333;
+    inputLabel: #929292;
+    inputBorder: #04b4e0;
+    inputFocusBorder: #808080;
+    inputFocusShadow: 0 0 0 1px #808080 inset;
+
+    nav: #04b4e0;
+    navText: #fff;
+    navActiveText: white;
+    navHover: #04b4e0;
+    navHoverText: white;
+
+    titleText: #333;
+    titleSecondaryText: #04b4e0;
+
+    copyright: #f2f2f2;
+    copyrightText: #999;
+
+    icon: #04b4e0;
+
+    tag: #04b4e0;
+    tagText: #fff;
+
+    tab: white;
+    tabText: #767676;
+    tabBorder: rgba(0, 0, 0, .1);
+    tabActiveBorder: #04b4e0;
+    tabActiveText: #04b4e0;
+    tabActive: #eee;
+}
+@theme dark {
+    primary: #2e2e2e;
+    primaryText: #eee;
+    secondary: #333;
+    secondaryText: white;
+
+    body: #333;
+    bodyText: white;
+    bodySecondary: #2e2e2e;
+    bodySecondaryText: #929292;
+
+    hover: #404040;
+    hoverText: white;
+
+    active: #454545;
+    activeText: white;
+
+    dialog: #3b3b3b;
+    dialogText: white;
+
+    button: transparent;
+    buttonText: #929292;
+    buttonBorder: #6B6B6B;
+    buttonHoverText: white;
+    buttonHover: #404040;
+
+    linkText: #43a1e1;
+
+    shadow: rgba(255, 255, 255, .25);
+    disable: #ababaa;
+
+    input: #2b2b2b;
+    inputTextIcon: white;
+    inputText: white;
+    inputLabel: #929292;
+    inputBorder: #6B6B6B;
+    inputFocusBorder: #808080;
+    inputFocusShadow: 0 0 0 1px #808080 inset;
+
+    nav: #2e2e2e;
+    navText: #929292;
+    navActiveText: white;
+    navHover: #404040;
+    navHoverText: white;
+
+    titleText: #929292;
+    titleSecondaryText: white;
+
+    copyright: #404040;
+    copyrightText: #929292;
+
+    icon: #929292;
+
+    tag: #404040;
+    tagText: #929292;
+
+    tab: #333;
+    tabText: #eee;
+    tabBorder: rgba(0, 0, 0, .1);
+    tabActiveBorder: #fff;
+    tabActiveText: #fff;
+    tabActive: #2e2e2e;
+}
+
+@theme mono {
+    primary: #242424;
+    primaryText: #fff;
+
+    secondary: #f2f2f2;
+    secondaryText: #999;
+
+    body: #f4f4f4;
+    bodyText: #333;
+    bodySecondary: #fff;
+    bodySecondaryText: #888;
+
+    hover: #404040;
+    hoverText: white;
+
+    active: #454545;
+    activeText: white;
+
+    dialog: white;
+    dialogText: #888;
+
+    button: transparent;
+    buttonText: #666;
+    buttonBorder: #04b4e0;
+    buttonHoverText:  white;
+    buttonHover: #04b4e0;
+
+    linkText: #333;
+
+    shadow: rgba(0, 0, 0, .25);
+    disable: #ababaa;
+
+    input: transparent;
+    inputTextIcon: white;
+    inputText: #333;
+    inputLabel: #929292;
+    inputBorder: #04b4e0;
+    inputFocusBorder: #808080;
+    inputFocusShadow: 0 0 0 1px #808080 inset;
+
+    nav: #363636;
+    navText: white;
+    navActiveText: #04b4e0;
+    navHover: #000;
+    navHoverText: white;
+
+    titleText: #333;
+    titleSecondaryText: #d4d4d4;
+
+    copyright: #f2f2f2;
+    copyrightText: #999;
+
+    icon: #04b4e0;
+
+    tag: #333;
+    tagText: #999;
+
+    tab: #f4f4f4;
+    tabText: #767676;
+    tabBorder: rgba(0, 0, 0, .1);
+    tabActiveBorder: #333;
+    tabActiveText: #333;
+    tabActive: #fff;
+}
