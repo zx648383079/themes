@@ -680,7 +680,7 @@ a {
         span,
         a {
             margin-right: 20px;
-            color: @bodysecondaryText;
+            color: @bodySecondaryText;
         }
         .language-toggle {
             display: inline-block;
@@ -721,7 +721,7 @@ a {
         border-top: 1px dotted @primary;
         line-height: 40px;
         font-size: 20px;
-        color: @bodysecondaryText;
+        color: @bodySecondaryText;
         .agree,
         .disagree {
             float: right;
