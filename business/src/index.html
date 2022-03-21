@@ -1,0 +1,263 @@
+@layouts/main
+<div class="banner-container" style="background: url(images/banner.png);">
+    <div class="container">
+        <div class="content-wrap">
+            <div class="border-line"></div>
+            <h1 class="title">We maximize</h1>
+            <h3 class="sub-title">your business growth</h3>
+            <div class="btn-part">
+                <a class="btn btn-default" href="contact.html">Find Consultant</a>
+            </div>
+        </div>
+        <div class="animate-part">
+            <div class="spiner dot">
+                <img class="rotate_Y" src="images/dot-rect.png" alt="images">
+            </div>
+            <div class="spiner tri-circle">
+                <img class="up-down" src="images/tri-circle1.png" alt="images">
+            </div>
+            <div class="spiner circle">
+                <img class="up-down" src="images/circle1.png" alt="images">
+            </div>
+            <div class="spiner line">
+                <img class="up-down" src="images/line1.png" alt="images">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="about-floor bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="images-part">
+                    <img src="images/about.png" alt="Images">
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="sec-title">
+                    <h2 class="title-bar">
+                        We take your business to next level
+                    </h2>
+                    <span class="sub-text">30+ years experience in business and finance consulting, IT solutions, and working with 5k+ clients over the world. </span>
+
+                    <p class="margin-0">Nor is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but occasionally circumstances occur in which toil and pain can procure him some great pleasure. Creation timelines for the digital consulting business theme 2021 bstandard lorem ipsum passage vary, with some citing the 15th century and others the 20th.</p>
+                    <div class="btn-part">
+                        <a class="btn btn-default" href="about.html">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="service-floor bg-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+               <div class="sec-title mb-70 md-mb-30">
+                   <h2 class="title-bar">
+                       What services we provide to our customers business
+                   </h2>
+               </div>
+            </div>
+            <div class="col-lg-5 text-right md-left">
+                <div class="btn-part mb-90 md-mb-50">
+                    <a class="btn btn-default" href="services-style1.html">View Services</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @layouts/serviceItem@6
+        </div>
+    </div>
+</div>
+
+<div class="project-floor bg-3">
+    <div class="container">
+        <h2 class="title-bar center">
+            Completed business cases
+        </h2>
+        <div class="filter-bar">
+            <a class="active">All</a>
+            <a >Business Strategy</a>
+            <a >Financial</a>
+            <a >Investment</a>
+            <a >Tax Consulting</a>
+        </div>                    
+        <div class="row">
+            @layouts/projectItem@9
+        </div>
+    </div>
+</div>
+
+<div class="team-floor bg-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <h2 class="title-bar">
+                    We’re experienced professionals
+                </h2>
+            </div>
+            <div class="col-lg-7 text-right">
+                <div class="btn-part">
+                    <a class="btn btn-default" href="about.html">View Peoples</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper team-swiper">
+            <div class="swiper-wrapper">
+                @layouts/teamSlide@20
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+
+<div class="reason-floor bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="title-bar">
+                    <h2>
+                        Why choose us
+                    </h2>
+                    <p class="bar-text">We donec pulvinar magna id leoersi pellentesque impered dignissim rhoncus euismod euismod eros vitae. we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment.</p>
+                </div>
+                <!-- Skillbar Section Start -->
+                <div class="skill-group">
+                    <div class="skill-item">
+                        <span class="item-title">Business Planning</span>
+                        <div class="item-progress">
+                            <p class="progress-bar" style="width: 90%;"></p>
+                            <span class="progress-tip">90%</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Skillbar Section End -->
+            </div>
+            <div class="col-lg-6">
+                <div class="video-preview active">
+                    <div class="images-video">
+                        <img src="images/about.png" alt="images">
+                    </div>
+                    <div class="video-border">
+                        <a class="play-icon" href="#">
+                            <i class="fa fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="service-floor">
+        <div class="container">
+            @layouts/serviceRow
+        </div>
+    </div>
+</div>
+
+<div class="comment-floor bg-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 md-mb-40">
+                <div class="comment-image">
+                    <img src="images/test.png" alt="Testimonial">
+                </div>
+            </div>
+            <div class="col-lg-6 pl-60 md-pl-15">
+                <div class="swiper comment-swiper">
+                    <div class="swiper-wrapper">
+                        @layouts/commentSlide@10
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="post-floor bg-3">
+    <div class="container">  
+        <h2 class="title-bar center">
+            Latest blog posts
+        </h2>
+        <div class="swiper post-swiper">
+            <div class="swiper-wrapper">
+                @layouts/postSlide@10
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="contact-floor contact-floor-5 bg-4">
+    <div class="container contact-fixed">
+        <h2 class="title-bar center">
+            Let us help your business to move forward.
+        </h2>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="contact-map">
+                    <iframe src="https://zodream.cn"></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6 md-mt-55 pl-40 md-pl-15">
+                <div class="contact-wrap dark-form">
+                    @layouts/contactForm 联系我们表单
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6 md-mb-30">
+                <div class="services-item">
+                   <div class="item-icon">
+                       <img src="images/icon.png" alt="images">
+                   </div>
+                   <div class="item-body">
+                       <h2 class="title"><a href="#">USA office</a></h2>
+                       <p class="item-text">55 Gerad Lane,<br> 
+                        NY 11201, USA</p>
+                   </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 md-mb-30">
+                <div class="services-item">
+                   <div class="item-icon">
+                       <img src="images/icon.png" alt="images">
+                   </div>
+                   <div class="item-body">
+                       <h2 class="title"><a href="#">BD office</a></h2>
+                       <p class="item-text">Ta-134/A, Link<br> Road, Gulshan-1</p>
+                   </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 xs-mb-30">
+                <div class="services-item">
+                   <div class="item-icon">
+                       <img src="images/icon.png" alt="images">
+                   </div>
+                   <div class="item-body">
+                       <h2 class="title"><a href="#">Email us</a></h2>
+                        <a href="">test@gamil.com</a><br>
+                        <a href="">test2@gamil.com</a>
+                   </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+                <div class="services-item">
+                   <div class="item-icon">
+                       <img src="images/icon.png" alt="images">
+                   </div>
+                   <div class="item-body">
+                       <h2 class="title"><a href="#">Call us</a></h2>
+                       <a href="">(+088) 589-8745</a>
+                       <a href="">(+088) 222-9999</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

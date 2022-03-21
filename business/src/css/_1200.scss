@@ -1,0 +1,27 @@
+@media only screen and (min-width: 1200px) {
+    .top-bar {
+        display: block;
+    }
+    .nav-bar {
+        .nav-menu {
+            display: block;
+        }
+    }
+    .navbar-panel {
+        .nav-menu {
+            display: none;
+        }
+        .nav-info {
+            display: block;
+        }
+    }
+    .contact-floor {
+        .flex-row {
+            display: flex;
+        }
+        .office-bg{
+            flex: 3;
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+@layouts/main
+
+<div class="breadcrumbs banner-1">
+    <div class="container">
+        <div class="breadcrumbs-inner">
+            <h1 class="title-bar">Cart</h1>
+        </div>
+    </div>
+</div>
+<div class="cart-floor">
+    <div class="container">
+        <div class="cart-wrap">
+            <form>
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th class="row-remove"></th>
+                            <th class="row-thumbnail"></th>
+                            <th class="row-name">Product</th>
+                            <th class="row-price">Price</th>
+                            <th class="row-quantity">Quantity</th>
+                            <th class="row-subtotal">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="row-remove"><a href="#"><i class="fa fa-close"></i></a></td>
+                            <td class="row-thumbnail"><a href="#"><img src="images/3.png" alt=""></a></td>
+                            <td class="row-name"><a href="#">Medicine Bottle</a></td>
+                            <td class="row-price"><span>$</span>30.00</td>
+                            <td class="row-quantity"><input type="text" class="form-control" value="1" pattern="[0-9]*"></td>
+                            <td class="subtotal"><span class="amount"><span class="symbol">$</span>30.00</span></td>
+                        </tr>
+                        <tr>
+                            <td class="row-remove"><a href="#"><i class="fa fa-close"></i></a></td>
+                            <td class="row-thumbnail"><a href="#"><img src="images/4.png" alt=""></a></td>
+                            <td class="row-name"><a href="#">Medicine Bottle</a></td>
+                            <td class="row-price"><span>$</span>30.00</td>
+                            <td class="row-quantity"><input type="text" class="form-control" value="1" pattern="[0-9]*"></td>
+                            <td class="subtotal"><span class="amount"><span class="symbol">$</span>30.00</span></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="flat-input">
+                                            <input type="text" name="text" placeholder="Coupon code" class="form-control">
+                                            <button class="btn btn-default" type="submit">Apply Coupon</button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <button class="btn btn-default" type="submit">Update cart</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            <div class="checkout-floor">
+                <div class="row">
+                    <div class="col-md-6 offset-md-6">
+                        <div class="title">Cart totals</div>
+                        <table class="total-table">
+                            <tbody>
+                                <tr class="cart-subtotal">
+                                    <th>Subtotal</th>
+                                    <td><span class="amount"><span>$</span>60.00</span></td>
+                                </tr>
+                                <tr class="order-total">
+                                    <th>Total</th>
+                                    <td><strong><span class="amount"><span>$</span>60.00</span></strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="checkout-btn">
+                            <button class="btn btn-default" type="submit"> Proceed to checkout</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+@layouts/main
+<div class="breadcrumbs banner-1">
+    <div class="container">
+        <div class="breadcrumbs-inner">
+            <h1 class="page-title">
+                Shop
+            </h1>
+        </div>
+    </div>
+</div>
+<div class="product-floor">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-12 sm-mb-30">
+                <div class="product-image">
+                    <div class="images-single">
+                        <img src="images/about.png" alt="Single Product">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+                <div class="price-info">
+                    <h4 class="product-title">Digital CC Camera</h4>
+                    <span class="price">$150.00</span>
+                    <p class="some-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <form class="flat-input">
+                        <input type="number" class="form-control" step="1" min="1" value="1">
+                        <button class="btn btn-default" type="submit">Add To cart</button>
+                    </form>
+                    <p class="product-tags"><span>Category:</span><a href="#"> Business</a></p>
+                </div>
+            </div> 
+        </div>
+        <div class="tab-area">
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">Reviews (0)</button>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                    <p class="dsc-p">A product can be classified as tangible or intangible. A tangible product is a physical object that can be perceived by touch such as a building, vehicle, gadget, or clothing. An intangible product is a product that can only be perceived indirectly such as an insurance policy</p>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                    <div class="comment-container">
+                        <div class="top-area">
+                            <p>There are no reviews yet.</p>
+                            <h6>Be the first to review “Digital CC Camera”</h6>
+                        </div>
+
+                        <form class="comment-form" id="commentform">
+                            <p class="comment-notes">Your email address will not be published. Required fields are marked *</p>
+
+                            <div class="form-group">
+                                <label>Name *</label>
+                                <input type="text" name="name" size="30"  class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="Email" name="email" size="30"  class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label>Your rating</label>
+                                <div class="star-input">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Your review *</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <div class="btn-part">
+                                <button class="btn btn-default" type="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- .tab-area -->
+    </div>
+</div>
+
+<div class="shop-floor">
+    <div class="container">
+        <h4 class="title-bar">Related products</h4>
+        <div class="row">
+            @layouts/productItem@3
+        </div>
+    </div>
+</div>

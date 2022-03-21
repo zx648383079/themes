@@ -1,0 +1,37 @@
+@media only screen and (min-width: 991px) {
+    .lg-order-last {
+        order: 6!important;
+    }
+    .top-bar {
+        display: block;
+    }
+    .nav-bar {
+        .nav-menu {
+            display: block;
+        }
+    }
+    .navbar-panel {
+        .nav-menu {
+            display: none;
+        }
+        .nav-info {
+            display: block;
+        }
+    }
+    .contact-floor {
+        .flex-row {
+            display: flex;
+        }
+        .contact-map {
+            height: auto;
+        }
+        .office-bg{
+            display: none;
+        }
+    }
+    .apply-floor {
+        .patter-bg {
+            display: block;
+        }
+    }
+}
