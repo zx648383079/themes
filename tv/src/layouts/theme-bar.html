@@ -1,0 +1,52 @@
+@@ 主题切换按钮
+
+<div class="theme-bar">
+    <a class="theme-default active" title="默认主题"></a>
+    <a class="theme-dark" title="深色主题"></a>
+</div>
+
+<style lang="scss">
+.theme-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: .2em;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    a {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        background-color: @default.body;
+        margin-right: .2em;
+        border: 1px solid @default.primary;
+        box-sizing: border-box;
+        &.active {
+            border-color: @default.primary;
+            border-width: .5em;
+        }
+    }
+    .theme-dark {
+        background-color: @dark.body;
+    }
+}
+</style>
+<script lang="ts">
+    $(function () {
+        $('.theme-bar a').click(function (e: MouseEvent) {
+            e.preventDefault();
+            $(this).addClass('active').siblings().removeClass('active');
+            const items = document.body.classList;
+            items.forEach(v => {
+                if (v.indexOf('theme-') === 0) {
+                    document.body.classList.remove(v);
+                }
+            });
+            if (this.classList[0] === 'theme-default') {
+                return;
+            }
+            document.body.classList.add(this.classList[0]);
+        });
+    });
+</script>

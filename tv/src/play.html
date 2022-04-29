@@ -1,0 +1,80 @@
+@layouts/main
+
+<div class="play-container">
+    <div class="play-title-bar">
+        <div class="back-btn">
+            <i class="fa fa-angle-left"></i>
+        </div>
+        标题
+    </div>
+    <div class="play-body">
+        <video class="play-video" src=""></video>
+        <div class="play-catalog">
+            <ul>
+                <li class="active">
+                    分集
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="play-bar">
+        <div class="progress-bar">
+            <div class="progress-inner" style="width: 40%;"></div>
+        </div>
+        <div class="bar-body">
+            <div class="bar-action">
+                <div class="btn">
+                    <i class="fa fa-backward-step"></i>
+                </div>
+                <div class="btn btn-max">
+                    <i class="fa fa-play"></i>
+                </div>
+                <!-- <i class="fa fa-pause"></i>
+                <i class="fa fa-stop"></i> -->
+                <div class="btn">
+                    <i class="fa fa-forward-step"></i>
+                </div>
+                
+                <div class="time-bar">
+                    00:00/00:00
+                </div>
+            </div>
+            <div class="bar-footer">
+                <select class="speed-btn">
+                    <option>0.5X</option>
+                    <option selected>1.0X</option>
+                    <option>1.2X</option>
+                    <option>1.5X</option>
+                    <option>2.0X</option>
+                    <option>3.0X</option>
+                </select>
+                <i class="fa fa-volume-high volume-icon"></i>
+                <i class="fa fa-list catalog-icon"></i>
+                <i class="fa fa-minimize full-icon"></i>
+            </div>
+        </div>
+        <div class="volume-dialog">
+            <div class="group-item">
+                <span class="item-label">
+                    <i class="fa fa-sun"></i>
+                </span>
+                <div class="item-body">
+                    <div class="progress-bar">
+                        <div class="progress-inner" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="group-item">
+                <span class="item-label">
+                    <i class="fa fa-volume-high"></i>
+                </span>
+                <div class="item-body">
+                    <div class="progress-bar">
+                        <div class="progress-inner" style="width: 40%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

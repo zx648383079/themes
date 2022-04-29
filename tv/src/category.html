@@ -1,0 +1,24 @@
+@layouts/main
+<div class="search-floor">
+    <div class="search-bar">
+        <input type="text" placeholder="搜索">
+        <i class="fa fa-search"></i>
+    </div>
+</div>
+<div class="cat-row">
+    <div class="row-header">
+        <div class="item-name">分类</div>
+        <ul class="item-more">
+            <li>推荐</li>
+        </ul>
+    </div>
+    <div class="row-body">
+        @layouts/movie@3
+    </div>
+    <a class="row-more" href="search.html">
+        <div class="more-icon">
+            <i class="fa fa-ellipsis"></i>
+        </div>
+        <div class="more-label">更多</div>
+    </a>
+</div>
