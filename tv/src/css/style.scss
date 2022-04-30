@@ -1,7 +1,7 @@
 @import "theme";
 
 body {
-    background-color: @body;
+    background: @bodyBg;
     color: @bodyText;
     overflow-x: hidden;
     font-size: 16px;
@@ -178,6 +178,7 @@ img {
 .cat-row {
     display: flex;
     height: 20rem;
+    margin-right: 1rem;
     .row-body {
         flex: 1;
     }

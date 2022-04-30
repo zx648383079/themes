@@ -1,7 +1,7 @@
 @@ 主题切换按钮
 
 <div class="theme-bar">
-    <a class="theme-default active" title="默认主题"></a>
+    <a class="theme-default" title="默认主题"></a>
     <a class="theme-dark" title="深色主题"></a>
 </div>
 
@@ -34,19 +34,31 @@
 </style>
 <script lang="ts">
     $(function () {
-        $('.theme-bar a').click(function (e: MouseEvent) {
+        const theme = localStorage.getItem('t');
+        const themeItems = $('.theme-bar a').on('click', function (e) {
             e.preventDefault();
-            $(this).addClass('active').siblings().removeClass('active');
+            toggleTheme(this.classList[0]);
+        });
+        const toggleTheme = (cls) => {
             const items = document.body.classList;
             items.forEach(v => {
                 if (v.indexOf('theme-') === 0) {
                     document.body.classList.remove(v);
                 }
             });
-            if (this.classList[0] === 'theme-default') {
+            localStorage.setItem('t', cls);
+            themeItems.each(function() {
+                $(this).toggleClass('active', this.classList[0] == cls);
+            });
+            if (cls === 'theme-default') {
                 return;
             }
-            document.body.classList.add(this.classList[0]);
-        });
+            document.body.classList.add(cls);
+        };
+        if (theme) {
+            toggleTheme(theme);
+        } else {
+            themeItems.eq(0).trigger('click');
+        }
     });
 </script>
