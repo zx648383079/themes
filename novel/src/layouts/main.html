@@ -1,0 +1,83 @@
+@@ 不要编译此页面
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        @=title
+        -小说网</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="../css/style.scss">
+</head>
+<body>
+    <header class="header">
+        <div class="top-nav-bar">
+            <div class="container">
+                <a href="">常见问题</a>
+                <a href="">我的书架</a>
+                <a href="">浏览记录</a>
+            </div>
+        </div>
+        <div class="large-nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="title-bar">
+                            <h2>ZODREAM</h2>
+                            <span>一个小说网页</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <form class="search-bar" action="../search.html">
+                            <input type="text" class="form-control">
+                            <button class="btn btn-primary">搜索</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-nav-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="nav-item with-drop">
+                            <a href="../search.html">全部分类</a>
+                            <div class="drop-bar">
+                                @itemCat@10
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <a href="../index.html" class="nav-item">首页</a>
+                        <a href="../topest.html" class="nav-item">排行榜</a>
+                        <a href="" class="nav-item">完本</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    @... 如果其他页面使用页面，则把其他页面当作内容替换此处
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center">
+                        Copyright ©zodream.cn, All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    @theme-bar 主题切换工具栏
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/animate.min.js"></script>
+    <script src="../js/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+@layouts/main
+@title=详情页
+<div class="container main-box">
+    <div class="panel-container novel-header-box">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="cover">
+                    <img src="https://zodream.cn/assets/images/zx.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="title">小说</div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="line-item">
+                            作者：zzz
+                        </div>
+                        <div class="line-item">
+                            最新章节：<a href="">dsdsd</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="line-item">
+                            操作：
+                            <a>加入书架</a>
+                        </div>
+                        <div class="line-item">
+                            当前阅读：<a href="">dsdsd</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content">
+                    简介
+                </div>
+                <div class="action-bar">
+                    <div class="btn-group">
+                        <div class="btn btn-primary">立即阅读</div>
+                        <div class="btn-group dropdown">
+                            <a class="btn btn-success dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">下载</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item">TXT</a>
+                                <a class="dropdown-item">ZIP</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-container chapter-box">
+        <div class="catalog-header">
+            <a class="right">
+                <i class="fa fa-sort-alpha-down"></i>
+                正序
+            </a>
+        </div>
+        <div class="catalog-box">
+            <div class="row">
+                <div class="col-12 group-header">
+                    <div class="title">分卷</div>
+                </div>
+                @layouts/chapter@9
+            </div>
+            
+        </div>
+    </div>
+</div>
