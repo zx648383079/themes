@@ -122,11 +122,52 @@ function bindReader() {
     if ($('.reader-container').length === 0) {
         return;
     }
+    const setTheme = (name: number) => {
+        settingModal.find('.theme-box .theme-' + name).addClass('active');
+        $('body').addClass('theme-' + name);
+        Cookies.set('theme', name as any);
+    };
+    const setFont = (index: number) => {
+        settingModal.find('.font-box span').eq(index).addClass('active');
+        $(".chapte-box").addClass('font-' + index);
+        Cookies.set('font', index as any);
+    };
+    const setSize = (size: number) => {
+        settingModal.find('.size-box .lang').text(size);
+        $(".chapte-box").css('font-size', size + 'px');
+        Cookies.set('size', size as any);
+    };
     const toggleFull = () => {
         $(document.body).toggleClass('reader-focus-mode', $win.width() < 480 || $win.height() < 480);
     };
     const settingModal = $('.setting-dialog').on('click', '.dialog-close', () => {
         settingModal.hide();
+    }).on('click', '.theme-box span', function() {
+        const $this = $(this);
+        let oldClass = $this.parent().find('.active').removeClass('active').attr('class');
+        let newClass = $this.index();
+        $('body').removeClass(oldClass);
+        setTheme(newClass);
+    }).on('click', '.font-box span', function() {
+        const $this = $(this);
+        let oldClass = $this.parent().find('.active').removeClass('active').index();
+        let newClass = $this.index();
+        $(".chapte-box").removeClass('font-' + oldClass);
+        setFont(newClass);
+    }).on('click', '.size-box .fa', function() {
+        const $this = $(this);
+        let ele = $this.parent().find('.lang');
+        let val = parseInt(ele.text()) || 18;
+        let isMinus = $this.hasClass('fa-minus');
+        if ((val <= 12 && isMinus) || (val >= 48 && !isMinus)) {
+            return;
+        }
+        if (isMinus) {
+            val -= 2;
+        } else {
+            val += 2;
+        }
+        setSize(val);
     });
     const $win = $(window).on('scroll', () => {
         $('.reader-sidebar .go-top').toggle($win.scrollTop() > 50);
@@ -135,13 +176,19 @@ function bindReader() {
         if (e.code === 'ArrowRight') {
             e.preventDefault();
             e.stopPropagation();
-            $('.control-bar .next-item a').trigger('click');
+            window.location.href = $('.control-bar .next-item a').attr('href');
             return;
         }
         if (e.code === 'ArrowLeft') {
             e.preventDefault();
             e.stopPropagation();
-            $('.control-bar .prev-item a').trigger('click');
+            window.location.href = $('.control-bar .prev-item a').attr('href');
+            return;
+        }
+        if (e.code === 'Enter') {
+            e.preventDefault();
+            e.stopPropagation();
+            window.location.href = $('.control-bar .menu-item a').attr('href');
             return;
         }
     });
@@ -150,6 +197,9 @@ function bindReader() {
     }).on('click', '.do-setting', () => {
         settingModal.show();
     });
+    setTheme(Cookies.get('theme') as any || 0);
+    setFont(Cookies.get('font') as any || 3);
+    setSize(Cookies.get('size') as any || 18);
     toggleFull();
 }
 

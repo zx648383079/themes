@@ -587,6 +587,7 @@ a {
         .theme-box {
             padding-top: 0.3125rem;
             span {
+                user-select: none;
                 border-radius: 50%;
                 display: inline-block;
                 width: 1.875rem;
@@ -600,6 +601,7 @@ a {
         }
         .font-box {
             span {
+                user-select: none;
                 border: 1px solid #333;
                 padding: 2px 5px;
                 &.active {
@@ -718,3 +720,4 @@ a {
 
 @import '0';
 @import '767';
+@import 'read';
