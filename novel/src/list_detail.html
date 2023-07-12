@@ -1,0 +1,38 @@
+@layouts/main
+@title=书单详情
+
+<div class="container">
+    <div class="panel-container novel-list-info">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="info-main">
+                    <div class="title">书名</div>
+                    <p class="desc">数排名</p>
+                    <div class="info-footer">
+                        <a href="">作者</a>
+                        <span class="time">2019-09</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="info-action">
+                    <div class="info-count">
+                        <span>0本书</span>
+                        <span>0浏览</span>
+                        <span>0收藏</span>
+                    </div>
+                    <div class="text-center mt-30">
+                        <div class="btn btn-primary">
+                            <i class="fa fa-heart"></i>
+                            收藏
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel-container">
+        @layouts/itemListNovel@10
+    </div>
+
+</div>
