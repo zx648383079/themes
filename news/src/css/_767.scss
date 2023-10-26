@@ -1,0 +1,46 @@
+@media only screen and (min-width: 48rem) {
+    .app-wrapper {
+        display: flex;
+        .sidebar-container {
+            width: 23rem;
+        }
+        .main-container {
+            flex: 1;
+        }
+    }
+    .nav-panel {
+        left: auto;
+        background-color: transparent;
+        color: @bodyText;
+        .nav-brand,
+        .social-bar,
+        .copyright {
+            padding-right: 0;
+        }
+        a {
+            color: @bodyText;
+        }
+        .nav-bar {
+            text-align: right;
+            max-height: auto;
+            overflow: unset;
+            a {
+                padding-right: 0;
+            }
+        }
+        .nav-sub-bar {
+            box-shadow: .25rem 0 .25rem .25rem @shadow;
+            position: absolute;
+            width: 15rem;
+            text-align: left;
+        }
+    }
+    .nav-toggle-arrow {
+        display: none;
+    }
+    .nav-fully-open {
+        .nav-dialog-mask {
+            display: none;
+        }
+    }
+}

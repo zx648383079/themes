@@ -1,0 +1,19 @@
+{
+  "name": "news",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "npm run shared && vue2mini --theme",
+    "start": "npm run shared && vue2mini --theme --watch",
+    "shared": "vue2mini --theme --input=../shared"
+  },
+  "author": "zodream",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "^3.5.22",
+    "@types/js-cookie": "^3.0.4",
+    "chokidar": "^3.5.3",
+    "gulp-vue2mini": "^1.4.0",
+    "typescript": "^5.2.2"
+  }
+}
