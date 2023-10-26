@@ -1,4 +1,4 @@
-
+@use 'sass:math';
 .nav-panel {
     left: -30rem;
     transition: left 500ms;
@@ -42,20 +42,24 @@
     background-color: rgba($color: #000000, $alpha: .3);
 }
 
+$toggleHeight: .25rem;
+$toggleMargin: .5rem;
+$toggleCount: 3;
+$toggleOffset: math.div($toggleMargin * ($toggleCount - 1), 2) + $toggleHeight * math.ceil(math.div($toggleCount - 2, 2));
+
 .nav-toggle-arrow {
     position: fixed;
     top: 2rem;
     left: 2rem;
     z-index: 101;
-    width: 2rem;
-    height: 1rem;
     span {
+        transform-origin: center;
+        width: 2.5rem;
+        height: $toggleHeight;
+        background-color: @bodyText;
         display: block;
-        width: 1.5rem;
-        height: 0.15rem;
-        background-color: #333;
-        margin-top: .4rem;
-        transition: transform .5s;
+        margin: $toggleMargin auto;
+        transition: all 0.3s ease-in-out;
     }      
 }
 
@@ -69,19 +73,15 @@
     }
     .nav-toggle-arrow {
         span {
-            display: none;
+            opacity: 0;
             background-color: @primaryText;
-            &:first-of-type,
-            &:last-of-type {
-                display: block;
-                position: absolute;
-                top: .25rem;
-            }
             &:first-of-type {
-                transform: rotateZ(45deg);
+                opacity: 1;
+                transform: translateY($toggleOffset) rotate(45deg);
             }
             &:last-of-type {
-                transform: rotateZ(-45deg);
+                opacity: 1;
+                transform: translateY(-$toggleOffset) rotate(-45deg);
             }
         }
     }
