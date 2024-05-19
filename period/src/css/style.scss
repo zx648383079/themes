@@ -1,7 +1,11 @@
+@import 'functions';
+@import 'mixins';
 @import "theme";
+@import 'root';
+@import 'themeBar';
 
 body {
-    background-color: $bg;
+    background-color: var(--#{$prefix}-body);
 }
 
 a {
@@ -35,10 +39,10 @@ a {
 }
 
 .footer {
-    background: $headerBg;
+    background: var(--#{$prefix}-primary);
     padding: 9px 0;
     margin-top: 1.875em;
-    color: $headerFg;
+    color: var(--#{$prefix}-primary-text);
 }
 
 .main-box {

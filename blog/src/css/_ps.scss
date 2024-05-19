@@ -9,7 +9,7 @@
 }
 
 /*
-* Scrollbar rail styles
+* -scrollbar rail styles
 */
 
 .ps__rail-x {
@@ -75,18 +75,18 @@
     .ps__rail-y:focus,
     .ps__rail-x.ps--clicking,
     .ps__rail-y.ps--clicking {
-        background-color: @primary;
+        background-color: var(--#{$prefix}-primary);
         opacity: 0.9;
     }
 }
 
 /*
-   * Scrollbar thumb styles
+   * -scrollbar thumb styles
    */
 
 .ps__thumb-x,
 .ps__thumb-y {
-    background-color: @secondary;
+    background-color: var(--#{$prefix}-secondary);
     border-radius: 6px;
 }
 .ps__thumb-x {
@@ -115,7 +115,7 @@
     &:hover>.ps__thumb-x,
     &:focus>.ps__thumb-x,
     &.ps--clicking .ps__thumb-x {
-        background-color: @hover;
+        background-color: var(--#{$prefix}-hover);
         height: 11px;
     }
 }
@@ -125,12 +125,12 @@
     &:hover>.ps__thumb-y,
     &:focus>.ps__thumb-y,
     &.ps--clicking .ps__thumb-y {
-        background-color: @hover;
+        background-color: var(--#{$prefix}-hover);
         width: 8px;
     }
 }
 
-/* MS supports */
+/* M-s supports */
 @supports (-ms-overflow-style: none) {
     .ps {
         overflow: auto !important;

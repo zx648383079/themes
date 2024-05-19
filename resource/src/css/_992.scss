@@ -1,4 +1,4 @@
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 62rem) {
     .top-bar {
         .navbar-icon {
             display: none;
@@ -32,7 +32,7 @@
                     left: 50%;
                     margin-left: -.75rem;
                     border: .6rem solid transparent;
-                    border-bottom-color:  @secondary;
+                    border-bottom-color:  var(--#{$prefix}-secondary);
                     content: " ";
                     display: block;
                 }
@@ -43,10 +43,10 @@
         }
     }
     .navbar-next-bar {
-        background-color: @secondary;
+        background-color: var(--#{$prefix}-secondary);
         display: flex;
         a {
-            color: @secondaryText;
+            color: var(--#{$prefix}-secondary-text);
         }
         .navbar-next {
             flex: 1;
@@ -71,9 +71,9 @@
     .nav-sub {
         position: absolute;
         display: none;
-        background-color: @body;
-        color: @bodyText;
-        box-shadow: 0 0 20px @shadow;
+        background-color: var(--#{$prefix}-body);
+        color: var(--#{$prefix}-body-text);
+        box-shadow: 0 0 20px var(--#{$prefix}-shadow);
         width: 8rem;
         left: 0;
         z-index: 99;

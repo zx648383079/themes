@@ -1,8 +1,110 @@
-$headerBg: #242424;
-$headerFg: #fff;
-$bg: #f4f4f4;
-$overBg: #fff;
+$prefix: 'zre' !default;
+
+$primary: #04b4e0;
+$primaryText: #fff;
+
+$secondary: #f2f2f2;
+$secondaryText: #999;
+
+$body: #fff;
+$bodyText: #333;
+$bodySecondaryText: #666;
+
+$hover: #404040;
+$hoverText: white;
+
+$active: #454545;
+$activeText: white;
+
+$dialog: white;
+$dialogText: #888;
+
+$button: transparent;
+$buttonText: #666;
+$buttonBorder: #04b4e0;
+$buttonHoverText:  white;
+$buttonHover: #04b4e0;
+
+$linkText: #43a1e1;
+
 $shadow: rgba(0, 0, 0, .25);
-$remarkFg: #888;
-$menuFg: #b5b6b7;
-$activeFg: $headerBg;
+$disable: #ababaa;
+
+$input: transparent;
+$inputTextIcon: white;
+$inputText: #333;
+$inputLabel: #929292;
+$inputBorder: #04b4e0;
+$inputFocusBorder: #808080;
+$inputFocusShadow: 0 0 0 1px #808080 inset;
+
+$nav: white;
+$navText: #b5b6b7;
+$navActiveText: #04b4e0;
+$navPop: #04b4e0;
+$navPopText: white;
+
+$titleText: #333;
+$titleStrongText: #04b4e0;
+
+$copyright: #f2f2f2;
+$copyrightText: #999;
+
+$icon: #04b4e0;
+
+$tag: #04b4e0;
+$tagText: #fff;
+
+$dark-primary: #2e2e2e;
+$dark-primaryText: #eee;
+$dark-secondary: #333;
+$dark-secondaryText: white;
+
+$dark-body: #333;
+$dark-bodyText: white;
+$dark-bodySecondaryText: #929292;
+
+$dark-hover: #404040;
+$dark-hoverText: white;
+
+$dark-active: #454545;
+$dark-activeText: white;
+
+$dark-dialog: #3b3b3b;
+$dark-dialogText: white;
+
+$dark-button: transparent;
+$dark-buttonText: #929292;
+$dark-buttonBorder: #6B6B6B;
+$dark-buttonHoverText: white;
+$dark-buttonHover: #404040;
+
+$dark-linkText: #43a1e1;
+
+$dark-shadow: rgba(255, 255, 255, .25);
+$dark-disable: #ababaa;
+
+$dark-input: #2b2b2b;
+$dark-inputTextIcon: white;
+$dark-inputText: white;
+$dark-inputLabel: #929292;
+$dark-inputBorder: #6B6B6B;
+$dark-inputFocusBorder: #808080;
+$dark-inputFocusShadow: 0 0 0 1px #808080 inset;
+
+$dark-nav: #2e2e2e;
+$dark-navText: #929292;
+$dark-navActiveText: white;
+$dark-navPop: #404040;
+$dark-navPopText: white;
+
+$dark-titleText: #929292;
+$dark-titleStrongText: white;
+
+$dark-copyright: #404040;
+$dark-copyrightText: #929292;
+
+$dark-icon: #929292;
+
+$dark-tag: #404040;
+$dark-tagText: #929292;

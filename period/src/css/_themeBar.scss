@@ -1,0 +1,25 @@
+.theme-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: .2em;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+    a {
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        border-radius: 50%;
+        background-color: $body;
+        margin-right: .2em;
+        border: 1px solid $primary;
+        box-sizing: border-box;
+        &.active {
+            border-color: $primary;
+            border-width: .5em;
+        }
+    }
+    .theme-dark {
+        background-color: $dark-body;
+    }
+}

@@ -1,0 +1,47 @@
+$isFullyTheme: true !default;
+
+@mixin themeDark() {
+    --#{$prefix}-primary: #{$dark-primary};
+    --#{$prefix}-primary-text: #{$dark-primaryText};
+    --#{$prefix}-body: #{$dark-body};
+    --#{$prefix}-body-text: #{$dark-bodyText};
+    --#{$prefix}-secondary-text: #{$dark-secondaryText};
+    --#{$prefix}-button: #{$dark-button};
+    --#{$prefix}-button-text: #{$dark-buttonText};
+    --#{$prefix}-button-hover-text: #{$dark-buttonHoverText};
+    --#{$prefix}-button-hover: #{$dark-buttonHover};
+    --#{$prefix}-link-text: #{$dark-linkText};
+    --#{$prefix}-link-hover-text: #{$dark-linkHoverText};
+    --#{$prefix}-shadow: #{$dark-shadow};
+}
+
+@if $isFullyTheme {
+    .theme-dark {
+        @include themeDark();
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            @include themeDark();
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --#{$prefix}-primary: #{$primary};
+        --#{$prefix}-primary-text: #{$primaryText};
+        @if $isFullyTheme {
+            --#{$prefix}-body: #{$body};
+            --#{$prefix}-body-text: #{$bodyText};
+            --#{$prefix}-secondary-text: #{$secondaryText};
+            --#{$prefix}-button: #{$button};
+            --#{$prefix}-button-text: #{$buttonText};
+            --#{$prefix}-button-hover-text: #{$buttonHoverText};
+            --#{$prefix}-button-hover: #{$buttonHover};
+            --#{$prefix}-link-text: #{$linkText};
+            --#{$prefix}-link-hover-text: #{$linkHoverText};
+            --#{$prefix}-shadow: #{$shadow};
+        }
+    }
+}

@@ -1,16 +1,23 @@
+@import 'functions';
+@import 'mixins';
 @import "theme";
+@import 'root';
+@import 'themeBar';
+
+
+
 body {
-    background-color: @body;
-    color: @bodyText;
+    background-color: var(--#{$prefix}-body);
+    color: var(--#{$prefix}-body-text);
 }
 
 a {
-    color: @linkText;
+    color: var(--#{$prefix}-link-text);
     text-decoration: none;
     transition: .1s ease-in-out;
     &:link,
     &:visited {
-        color: @linkText;
+        color: var(--#{$prefix}-link-text);
     }
 }
 
@@ -56,7 +63,7 @@ header {
         top: 0;
         z-index: 99;
         text-align: left;
-        background-color: @body;
+        background-color: var(--#{$prefix}-body);
         a {
             padding-left: .8rem;
         }
@@ -79,7 +86,7 @@ header {
             position: absolute;
             left: .5rem;
             top: .6rem;
-            color: @secondaryText;
+            color: var(--#{$prefix}-secondary-text);
         }
         .form-control {
             padding-left: 1.5rem;
@@ -148,14 +155,14 @@ footer {
         text-align: left;
         left: 0;
         width: 10rem;
-        background-color: @panel;
+        background-color: var(--#{$prefix}-panel);
         line-height: 2.25rem;
-        box-shadow: 0 .25rem .25rem .25rem @shadow;
+        box-shadow: 0 .25rem .25rem .25rem var(--#{$prefix}-shadow);
         li {
             padding: 0 .7rem;
             cursor: pointer;
             &:hover {
-                background-color: @body;
+                background-color: var(--#{$prefix}-body);
             }
         }
         .fa {
@@ -229,8 +236,8 @@ footer {
     position: relative;
     margin-bottom: .75em;
     .comment {
-        background: @secondary;
-        box-shadow: 0 0 2px 0 @shadow;
+        background: var(--#{$prefix}-secondary);
+        box-shadow: 0 0 2px 0 var(--#{$prefix}-shadow);
         padding: 15px 10px;
     }
     .comment-content {
@@ -267,7 +274,7 @@ footer {
     }
     .children {
         padding-left: 1.5em;
-        border-left: solid 1px @secondary;
+        border-left: solid 1px var(--#{$prefix}-secondary);
         margin: .75em 0;
     }
 }
@@ -296,9 +303,9 @@ footer {
     }
     .book-copyright {
         clear: both;
-        background-color: @copyright;
+        background-color: var(--#{$prefix}-copyright);
         font-size: 12px;
-        color: @copyrightText;
+        color: var(--#{$prefix}-copyright-text);
         padding: 6px 15px 5px;
         border-radius: 2px;
         text-align: center;
@@ -354,14 +361,14 @@ footer {
 }
 
 .btn-default {
-    border: solid 1px @primary;
+    border: solid 1px var(--#{$prefix}-primary);
     padding: 6px 12px;
     margin-right: 12px;
     border-radius: 0;
-    color: @primary;
+    color: var(--#{$prefix}-primary);
     &:hover {
-        background-color: @primary;
-        color: @primaryText;
+        background-color: var(--#{$prefix}-primary);
+        color: var(--#{$prefix}-primary-text);
     }
 }
 
@@ -369,5 +376,4 @@ footer {
     border-radius: 0;
 }
 
-@import '0';
 @import '767';

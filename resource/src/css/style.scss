@@ -1,63 +1,67 @@
+@import 'functions';
+@import 'mixins';
 @import "theme";
+@import 'root';
+@import 'themeBar';
 
 body {
-    background-color: @body;
-    color: @bodyText;
+    background-color: var(--#{$prefix}-body);
+    color: var(--#{$prefix}-body-text);
 }
 
 a {
     text-decoration: none;
-    color: @linkText;
+    color: var(--#{$prefix}-link-text);
     &:hover {
         text-decoration: none;
-        color: @linkHoverText;
+        color: var(--#{$prefix}-link-hover-text);
     }
 }
 
 .btn-default {
-    background-color: @button;
-    color: @buttonText;
-    border-color: @buttonBorder;
+    background-color: var(--#{$prefix}-button);
+    color: var(--#{$prefix}-button-text);
+    border-color: var(--#{$prefix}-button-border);
     &:focus {
-        box-shadow: @inputFocusShadow;
+        box-shadow: var(--#{$prefix}-input-focus-shadow);
     }
     &:hover,
     &.active {
-        background-color: @buttonHover;
-        color: @buttonHoverText;
+        background-color: var(--#{$prefix}-button-hover);
+        color: var(--#{$prefix}-button-hover-text);
     }
 }
 
 
 .form-control {
-    background-color: @input;
-    color: @inputText;
-    border-color: @inputBorder;
+    background-color: var(--#{$prefix}-input);
+    color: var(--#{$prefix}-input-text);
+    border-color: var(--#{$prefix}-input-border);
     &:focus {
-        border-color: @inputFocusBorder;
-        box-shadow: @inputFocusShadow;
+        border-color: var(--#{$prefix}-input-focus-border);
+        box-shadow: var(--#{$prefix}-input-focus-shadow);
     }
 }
 
 .btn-outline-default {
-    color: @button;
-    border-color: @button;
+    color: var(--#{$prefix}-button);
+    border-color: var(--#{$prefix}-button);
     &:focus {
-        box-shadow: @inputFocusShadow;
+        box-shadow: var(--#{$prefix}-input-focus-shadow);
     }
     &:hover,
     &.active {
-        background-color: @button;
-        color: @buttonText;
+        background-color: var(--#{$prefix}-button);
+        color: var(--#{$prefix}-button-text);
     }
 }
 
 header,
 footer {
-    background-color: @primary;
-    color: @primaryText;
+    background-color: var(--#{$prefix}-primary);
+    color: var(--#{$prefix}-primary-text);
     a {
-        color: @primaryText;
+        color: var(--#{$prefix}-primary-text);
         text-decoration: none;
     }
     ul,
@@ -122,7 +126,7 @@ footer {
     }
     .search-inline {
         position: relative;
-        color: @bodyText;
+        color: var(--#{$prefix}-body-text);
         .form-control {
             padding-left: 2rem;
         }
@@ -141,13 +145,13 @@ footer {
 }
 
 .header-bg {
-    background-color: @secondary;
+    background-color: var(--#{$prefix}-secondary);
 }
 
 .title-bar {
     font-size: 2rem;
     font-weight: bold;
-    color: @titleText;
+    color: var(--#{$prefix}-title-text);
     .title-desc {
         font-size: 1rem;
         font-weight: 500;
@@ -185,14 +189,14 @@ footer {
         right: 10.5rem;
         font-size: 1.5rem;
         top: 1rem;
-        color: @primarySubText;
+        color: var(--#{$prefix}-primary-sub-text);
     }
 }
 
 .search-tip-bar {
-    color: @bodySecondaryText;
+    color: var(--#{$prefix}-body-secondary-text);
     padding-bottom: 1rem;
-    border-bottom: .2rem solid @border;
+    border-bottom: .2rem solid var(--#{$prefix}-border);
 }
 
 .sort-bar {
@@ -213,8 +217,8 @@ footer {
     }
     .sort-tip {
         padding: 0 1rem;
-        border-right: 1px solid @border;
-        color: @bodySecondaryText;
+        border-right: 1px solid var(--#{$prefix}-border);
+        color: var(--#{$prefix}-body-secondary-text);
     }
     .view-bar {
         padding: 0 1rem;
@@ -227,13 +231,13 @@ footer {
     line-height: 2rem;
     .filter-item {
         display: inline-flex;
-        border: 1px solid @border;
+        border: 1px solid var(--#{$prefix}-border);
         border-radius: .3rem;
         span {
             padding: 0 .4rem;
         }
         .fa {
-            border-left: 1px solid @border;
+            border-left: 1px solid var(--#{$prefix}-border);
             padding: .5rem .4rem;
         }
     }
@@ -243,18 +247,18 @@ footer {
     display: block;
     line-height: 2.5rem;
     a {
-        color: @linkText;
+        color: var(--#{$prefix}-link-text);
     }
     .item {
         display: inline-block;
         padding: 0 1.25rem;
         cursor: pointer;
         &:hover {
-            background-color: rgba($color: @border, $alpha: .3);
+            background-color: rgba($color: var(--#{$prefix}-border), $alpha: .3);
         }
         &.active {
-            background-color: @active;
-            color: @activeText;
+            background-color: var(--#{$prefix}-active);
+            color: var(--#{$prefix}-active-text);
         }
         &:first-of-type {
             border-top-left-radius: 0.3125rem;
@@ -268,7 +272,7 @@ footer {
 }
 
 .group-box {
-    background-color: @third;
+    background-color: var(--#{$prefix}-third);
     border-radius: .35rem;
     padding: .8rem;
     margin-bottom: 1rem;
@@ -279,7 +283,7 @@ footer {
 
 .content-body {
     min-height: 30rem;
-    background-color: @third;
+    background-color: var(--#{$prefix}-third);
     position: relative;
     margin-bottom: 5rem;
     img {
@@ -289,14 +293,14 @@ footer {
         position: absolute;
         right: -5rem;
         width: 3rem;
-        background-color: @body;
-        box-shadow: 0 0 20px @shadow;
+        background-color: var(--#{$prefix}-body);
+        box-shadow: 0 0 20px var(--#{$prefix}-shadow);
         a {
             display: block;
             text-align: center;
             padding: .5rem 0;
             &:hover {
-                background-color: @hover;
+                background-color: var(--#{$prefix}-hover);
                 .hover-popup {
                     display: block;
                 }
@@ -306,7 +310,7 @@ footer {
             display: none;
             width: 10rem;
             position: absolute;
-            box-shadow: 0 0 10px @shadow;
+            box-shadow: 0 0 10px var(--#{$prefix}-shadow);
             right: 0;
             img {
                 width: 100%;
@@ -327,7 +331,7 @@ footer {
 }
 
 .cat-item {
-    background: @secondary;
+    background: var(--#{$prefix}-secondary);
     border-radius: 0.5rem;
     position: relative;
     margin-bottom: 1rem;
@@ -382,8 +386,8 @@ footer {
     align-items: center;
     height: 100%;
     padding: 2rem;
-    background-color: rgba($color: @secondary, $alpha: .7);
-    color: @secondaryText;
+    background-color: rgba($color: var(--#{$prefix}-secondary), $alpha: .7);
+    color: var(--#{$prefix}-secondary-text);
     border-radius: .8rem;
     position: relative;
     .inner-body {
@@ -400,7 +404,7 @@ footer {
         height: 100%;
         display: block;
         content: "";
-        border: .2rem dotted @buttonHover;
+        border: .2rem dotted var(--#{$prefix}-button-hover);
         border-radius: .8rem;
         z-index: -1;
     }
@@ -408,7 +412,7 @@ footer {
 
 .res-item {
     border-radius: 0.5rem;
-    background-color: @secondary;
+    background-color: var(--#{$prefix}-secondary);
     position: relative;
     margin-bottom: 1rem;
     .item-thumb {
@@ -469,9 +473,9 @@ footer {
             margin: .5rem .8rem;
             padding: .3rem 1rem;
             border: 1px solid #ccc;
-            background-color: @button;
+            background-color: var(--#{$prefix}-button);
             &.active {
-                border-color: @buttonHover;
+                border-color: var(--#{$prefix}-button-hover);
             }
         }
     }
@@ -490,7 +494,7 @@ footer {
     margin-bottom: 1rem;
     display: flex;
     border-radius: 0.5rem;
-    background-color: @secondary;
+    background-color: var(--#{$prefix}-secondary);
     .item-thumb {
         height: 10rem;
         height: 15rem;
@@ -541,14 +545,14 @@ footer {
         padding: 0 1rem;
         text-decoration: none;
         &.active {
-            background-color: @body;
+            background-color: var(--#{$prefix}-body);
         }
     }
     .count-label {
         display: inline-block;
         padding: 0 .5rem;
-        background-color: @buttonHover;
-        color: @buttonHoverText;
+        background-color: var(--#{$prefix}-button-hover);
+        color: var(--#{$prefix}-button-hover-text);
         margin-right: -1rem;
     }
 }
@@ -584,7 +588,7 @@ footer {
     .price {
         text-align: right;
         font-size: 2rem;
-        color: @buttonHover;
+        color: var(--#{$prefix}-button-hover);
     }
     .group-footer {
         text-align: center;
@@ -765,8 +769,8 @@ footer {
         position: relative;
         margin-bottom: .75em;
         .comment {
-            background: @body;
-            box-shadow: 0 0 2px 0 @shadow;
+            background: var(--#{$prefix}-body);
+            box-shadow: 0 0 2px 0 var(--#{$prefix}-shadow);
             padding: 15px 10px;
         }
         .comment-content {
@@ -803,7 +807,7 @@ footer {
         }
         .children {
             padding-left: 1.5em;
-            border-left: solid 1px @body;
+            border-left: solid 1px var(--#{$prefix}-body);
             margin: .75em 0;
         }
     }
@@ -811,6 +815,5 @@ footer {
 
 
 @import "768";
-@import "991";
+@import "992";
 @import "1200";
-@import "0";

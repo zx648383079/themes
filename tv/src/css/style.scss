@@ -1,8 +1,12 @@
+@import 'functions';
+@import 'mixins';
 @import "theme";
+@import 'root';
+@import 'themeBar';
 
 body {
-    background: @bodyBg;
-    color: @bodyText;
+    background: var(--#{$prefix}-body);
+    color: var(--#{$prefix}-body-text);
     overflow-x: hidden;
     font-size: 16px;
     padding: 0;
@@ -11,10 +15,10 @@ body {
 
 a {
     text-decoration: none;
-    color: @linkText;
+    color: var(--#{$prefix}-link-text);
     &:hover {
         text-decoration: none;
-        color: @linkHoverText;
+        color: var(--#{$prefix}-link-hover-text);
     }
 }
 
@@ -126,7 +130,7 @@ img {
             margin-bottom: .5rem;
         }
         &.active {
-            box-shadow: 0 10px 10px 0 @shadow;
+            box-shadow: 0 10px 10px 0 var(--#{$prefix}-shadow);
         }
     }
 }
@@ -163,7 +167,7 @@ img {
     }
     &.active {
         transform: scaleY(1.1);
-        box-shadow: 0 10px 10px 10px @shadow;
+        box-shadow: 0 10px 10px 10px var(--#{$prefix}-shadow);
         z-index: 99;
         .item-body {
             background-color: rgba($color: #03fef1, $alpha: .7);
@@ -241,7 +245,7 @@ img {
 
 .sort-bar {
     .sort-item {
-        color: @linkText;
+        color: var(--#{$prefix}-link-text);
         display: inline-block;
         padding: 0.75rem 1.25rem;
         cursor: pointer;
@@ -249,8 +253,8 @@ img {
             background-color: rgba($color: #ccc, $alpha: .3);
         }
         &.active {
-            background-color: @buttonHover;
-            color: @buttonHoverText;
+            background-color: var(--#{$prefix}-button-hover);
+            color: var(--#{$prefix}-button-hover-text);
         }
         &:first-of-type {
             border-top-left-radius: 0.3125rem;
@@ -272,8 +276,8 @@ img {
             background-color: rgba($color: #ccc, $alpha: .3);
         }
         &.active {
-            background-color: @buttonHover;
-            color: @buttonHoverText;
+            background-color: var(--#{$prefix}-button-hover);
+            color: var(--#{$prefix}-button-hover-text);
         }
     }
 }
@@ -291,7 +295,7 @@ img {
 
 .btn-icon {
     border-radius: .3rem;
-    background-color: @button;
+    background-color: var(--#{$prefix}-button);
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -299,7 +303,7 @@ img {
     cursor: pointer;
     width: 4rem;
     height: 4rem;
-    color: @buttonText;
+    color: var(--#{$prefix}-button-text);
     .icon {
         font-size: 3rem;
     }
@@ -309,8 +313,8 @@ img {
     }
     &:hover,
     &.active {
-        background-color: @buttonHover;
-        color: @buttonHoverText;
+        background-color: var(--#{$prefix}-button-hover);
+        color: var(--#{$prefix}-button-hover-text);
         .icon {
             font-size: 2rem;
         }
@@ -342,7 +346,7 @@ img {
     
     .meta-bar {
         margin-top: 1rem;
-        color: @bodySecondaryText;
+        color: var(--#{$prefix}-secondary-text);
         p {
             margin: 0;
         }
@@ -374,8 +378,8 @@ img {
     cursor: pointer;
     &:hover,
     &.active {
-        background-color: @buttonHover;
-        color: @buttonHoverText;
+        background-color: var(--#{$prefix}-button-hover);
+        color: var(--#{$prefix}-button-hover-text);
     }
     &:not(:last-of-type) {
         border-bottom: none;
@@ -601,6 +605,5 @@ img {
 }
 
 @import "768";
-@import "991";
+@import "992";
 @import "1200";
-@import "0";

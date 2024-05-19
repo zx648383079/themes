@@ -48,7 +48,7 @@
         top: 0;
         right: 0;
         bottom: 0;
-        background-color: @primary;
+        background-color: var(--#{$prefix}-primary);
         z-index: 99;
         padding: 30px 30px 10px;
         text-align: center;
@@ -94,7 +94,7 @@
         height: 48px;
         line-height: 46px;
         text-align: center;
-        background-color: @primary;
+        background-color: var(--#{$prefix}-primary);
         right: 10px;
         font-size: 19px;
         top: 10px;

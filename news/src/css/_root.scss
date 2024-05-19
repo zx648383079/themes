@@ -1,0 +1,45 @@
+$isFullyTheme: true !default;
+
+@mixin themeDark() {
+    --#{$prefix}-primary: #{$dark-primary};
+    --#{$prefix}-primary-text: #{$dark-primaryText};
+    --#{$prefix}-secondary: #{$dark-secondary};
+    --#{$prefix}-secondary-text: #{$dark-secondaryText};
+    --#{$prefix}-body: #{$dark-body};
+    --#{$prefix}-body-text: #{$dark-bodyText};
+    --#{$prefix}-panel: #{$dark-panel};
+    --#{$prefix}-link-text: #{$dark-linkText};
+    --#{$prefix}-shadow: #{$dark-shadow};
+    --#{$prefix}-copyright: #{$dark-copyright};
+    --#{$prefix}-copyright-text: #{$dark-copyrightText};
+}
+
+@if $isFullyTheme {
+    .theme-dark {
+        @include themeDark();
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            @include themeDark();
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --#{$prefix}-primary: #{$primary};
+        --#{$prefix}-primary-text: #{$primaryText};
+        @if $isFullyTheme {
+            --#{$prefix}-secondary: #{$secondary};
+            --#{$prefix}-secondary-text: #{$secondaryText};
+            --#{$prefix}-body: #{$body};
+            --#{$prefix}-body-text: #{$bodyText};
+            --#{$prefix}-panel: #{$panel};
+            --#{$prefix}-link-text: #{$linkText};
+            --#{$prefix}-shadow: #{$shadow};
+            --#{$prefix}-copyright: #{$copyright};
+            --#{$prefix}-copyright-text: #{$copyrightText};
+        }
+    }
+}

@@ -1,27 +1,31 @@
+@import 'functions';
+@import 'mixins';
 @import "theme";
+@import 'root';
+@import 'themeBar';
 
 body {
-    background-color: @body;
-    color: @bodyText;
+    background-color: var(--#{$prefix}-body);
+    color: var(--#{$prefix}-body-text);
 }
 
 a {
-    color: @linkText;
+    color: var(--#{$prefix}-link-text);
     text-decoration: none;
     transition: .1s ease-in-out;
     &:link,
     &:visited {
-        color: @linkText;
+        color: var(--#{$prefix}-link-text);
     }
 }
 
 .header {
     .top-bar {
-        background: @body;
-        border-bottom: 1px solid @shadow;
+        background: var(--#{$prefix}-body);
+        border-bottom: 1px solid var(--#{$prefix}-shadow);
         display: block;
         height: 32px;
-        box-shadow: 0 2px 4px 0 @shadow;
+        box-shadow: 0 2px 4px 0 var(--#{$prefix}-shadow);
         margin-bottom: 20px;
         a {
             display: inline-block;
@@ -30,21 +34,21 @@ a {
             padding: 0 20px 0 0;
             text-align: center;
             font-size: 12px;
-            color: @bodySecondaryText;
+            color: var(--#{$prefix}-body-secondary-text);
             &:hover {
-                color: @hoverText;
+                color: var(--#{$prefix}-hover-text);
                 text-decoration: none;
             }
         }
     }
     .title-bar {
-        color: @titleText;
+        color: var(--#{$prefix}-title-text);
         margin-bottom: 20px;
         h2 {
             display: inline-block;
         }
         span {
-            color: @titleSecondaryText;
+            color: var(--#{$prefix}-title-secondary-text);
         }
     }
     .menu-box {
@@ -52,13 +56,13 @@ a {
     }
     .navbar {
         padding: 0;
-        background: @nav;
-        color: @navText;
+        background: var(--#{$prefix}-nav);
+        color: var(--#{$prefix}-nav-text);
         .nav-item {
             &:hover {
-                background-color: @navHover;
+                background-color: var(--#{$prefix}-nav-hover);
                 .nav-link {
-                    color: @navHoverText;
+                    color: var(--#{$prefix}-nav-hover-text);
                 }
             }
         }
@@ -67,22 +71,22 @@ a {
         }
     }
     .dropdown-menu {
-        background-color: @secondary;
-        color: @secondaryText;
+        background-color: var(--#{$prefix}-secondary);
+        color: var(--#{$prefix}-secondary-text);
     }
     .btn-default {
-        border-color: @secondaryText;
-        color: @secondaryText;
+        border-color: var(--#{$prefix}-secondary-text);
+        color: var(--#{$prefix}-secondary-text);
         &:hover {
-            background-color: @secondaryText;
-            color: @secondary;
+            background-color: var(--#{$prefix}-secondary-text);
+            color: var(--#{$prefix}-secondary);
         }
     }
 }
 
 .header-large {
-    background-color: @primary;
-    color: @primaryText;
+    background-color: var(--#{$prefix}-primary);
+    color: var(--#{$prefix}-primary-text);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,8 +101,8 @@ a {
 }
 
 .footer {
-    background: @primary;
-    color: @primaryText;
+    background: var(--#{$prefix}-primary);
+    color: var(--#{$prefix}-primary-text);
     padding: 20px 0 15px 0;
     margin-top: 1.875em;
 }
@@ -149,11 +153,7 @@ a {
             background: #4f565e;
             background: rgba(0,0,0,.12);
             display: inline-block;
-            font-family: "Font Awesome 5 Free";
-            font-style: normal;
-            font-weight: 900;
-            font-variant: normal;
-            text-transform: none;
+            @include iconFont();
             line-height: 1;
             width: 100%;
             left: 0;
@@ -193,7 +193,7 @@ a {
     }
     .byline {
         font-size: 12px;
-        color: @bodySecondaryText;
+        color: var(--#{$prefix}-body-secondary-text);
         white-space: nowrap;
         text-overflow: ellipsis;
         position: relative;
@@ -210,7 +210,7 @@ a {
 }
 
 .detail-box {
-    background-color: @bodySecondary;
+    background-color: var(--#{$prefix}-body-secondary);
     margin-bottom: .75rem;
     .thumb {
         position: relative;
@@ -269,12 +269,12 @@ a {
     }
     .byline {
         padding: 10px 0;
-        border-top: @tag solid 5px;
+        border-top: var(--#{$prefix}-tag) solid 5px;
         line-height: 1.5em;
-        color: @bodySecondaryText;
+        color: var(--#{$prefix}-body-secondary-text);
         font-size: 12px;
         a {
-            color: @bodySecondaryText;
+            color: var(--#{$prefix}-body-secondary-text);
         }
         .date,
         .category,
@@ -285,9 +285,9 @@ a {
     }
     .book-copyright {
         clear: both;
-        background-color: @copyright;
+        background-color: var(--#{$prefix}-copyright);
         font-size: 12px;
-        color: @copyrightText;
+        color: var(--#{$prefix}-copyright-text);
         padding: 6px 15px 5px;
         border-radius: 2px;
         text-align: center;
@@ -338,14 +338,14 @@ a {
 }
 
 .btn-default {
-    border: solid 1px @primary;
+    border: solid 1px var(--#{$prefix}-primary);
     padding: 6px 12px;
     margin-right: 12px;
     border-radius: 0;
-    color: @primary;
+    color: var(--#{$prefix}-primary);
     &:hover {
-        background-color: @primary;
-        color: @primaryText;
+        background-color: var(--#{$prefix}-primary);
+        color: var(--#{$prefix}-primary-text);
     }
 }
 
@@ -356,7 +356,7 @@ a {
 .side-bar {
     margin-top: 3em;
     .panel-header {
-        border-bottom: 3px solid @primary;
+        border-bottom: 3px solid var(--#{$prefix}-primary);
         h3 {
             font-size: 15px;
         }
@@ -364,7 +364,7 @@ a {
 }
 
 .panel {
-    background-color: @bodySecondary;
+    background-color: var(--#{$prefix}-body-secondary);
     padding: 15px 10px 15px;
     margin-bottom: .75rem;
     .panel-header {
@@ -388,15 +388,15 @@ a {
         display: inline-block;
         &.active {
             .page-link {
-                background-color: @primary;
-                border-color: @primary;
-                color: @primaryText;
+                background-color: var(--#{$prefix}-primary);
+                border-color: var(--#{$prefix}-primary);
+                color: var(--#{$prefix}-primary-text);
             }
         }
     }
     .page-link {
-        color: @bodyText;
-        background-color: @body;
+        color: var(--#{$prefix}-body-text);
+        background-color: var(--#{$prefix}-body);
     }
 }
 
@@ -404,8 +404,8 @@ a {
     position: relative;
     margin-bottom: .75em;
     .comment {
-        background: @bodySecondary;
-        box-shadow: 0 0 2px 0 @shadow;
+        background: var(--#{$prefix}-body-secondary);
+        box-shadow: 0 0 2px 0 var(--#{$prefix}-shadow);
         padding: 15px 10px;
     }
     .comment-content {
@@ -442,7 +442,7 @@ a {
     }
     .children {
         padding-left: 1.5em;
-        border-left: solid 1px @bodySecondary;
+        border-left: solid 1px var(--#{$prefix}-body-secondary);
         margin: .75em 0;
     }
 }
@@ -451,15 +451,15 @@ a {
     .tab-header {
         a {
             padding: 6px 12px;
-            color: @tabText;
+            color: var(--#{$prefix}-tab-text);
             display: block;
-            background-color: @tab;
+            background-color: var(--#{$prefix}-tab);
             float: left;
             text-decoration: none;
             &.active,
             &:hover {
-                background-color: @tabActive;
-                color: @tabActiveText;
+                background-color: var(--#{$prefix}-tab-active);
+                color: var(--#{$prefix}-tab-active-text);
             }
         }
         &::after {
@@ -499,7 +499,7 @@ a {
     position: relative;
     padding: 5px 10px;
     text-align: center;
-    border: 1px solid @tabBorder;
+    border: 1px solid var(--#{$prefix}-tab-border);
     border-radius: 5px;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -542,17 +542,17 @@ a {
         margin-right: 16px;
         cursor: pointer;
         pointer-events: auto;
-        background: @tab;
-        border: 1px solid @tabBorder;
+        background: var(--#{$prefix}-tab);
+        border: 1px solid var(--#{$prefix}-tab-border);
         border-radius: 100px;
-        color: @tabText;
+        color: var(--#{$prefix}-tab-text);
         display: flex;
         justify-content: center;
         min-width: 72px;
         padding: 5px 16px;
         &.active {
-            border-color: @tabActiveBorder;
-            color: @tabActiveText;
+            border-color: var(--#{$prefix}-tab-active-border);
+            color: var(--#{$prefix}-tab-active-text);
         }
     }
     .video-item {
@@ -663,7 +663,7 @@ a {
 .title-bar {
     margin-top: 2em;
     font-size: 1.2em;
-    color: @titleText;
+    color: var(--#{$prefix}-title-text);
 }
 
 .video-simple-item {
@@ -712,4 +712,4 @@ a {
 }
 
 @import '0';
-@import '767';
+@import '768';

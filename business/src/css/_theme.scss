@@ -1,122 +1,120 @@
-@theme default {
-    primary: #bb0b0b;
-    primaryText: #fff;
-    primarySubText: #ccc;
+$prefix: 'zre' !default;
 
-    secondary: #13171c;
-    secondaryText: #fff;
+$primary: #bb0b0b;
+$primaryText: #fff;
+$primarySubText: #ccc;
 
-    body: #fff;
-    bodyText: #0a0a0a;
-    bodySecondaryText: #666;
+$secondary: #13171c;
+$secondaryText: #fff;
 
-    third: #ebebeb;
-    thirdText: #333;
+$body: #fff;
+$bodyText: #0a0a0a;
+$bodySecondaryText: #666;
 
-    hover: #404040;
-    hoverText: white;
+$third: #ebebeb;
+$thirdText: #333;
 
-    active: #454545;
-    activeText: white;
+$hover: #404040;
+$hoverText: white;
 
-    dialog: #000;
-    dialogText: #fff;
+$active: #454545;
+$activeText: white;
 
-    button: #bb0b0b;
-    buttonText: #fff;
-    buttonBorder: #bb0b0b;
-    buttonHoverText:  white;
-    buttonHover: #c43434;
+$dialog: #000;
+$dialogText: #fff;
 
-    linkText: #0a0a0a;
-    linkHoverText: #bb0b0b;
+$button: #bb0b0b;
+$buttonText: #fff;
+$buttonBorder: #bb0b0b;
+$buttonHoverText:  white;
+$buttonHover: #c43434;
 
-    shadow: rgba(0, 0, 0, .25);
-    disable: #ababaa;
+$linkText: #0a0a0a;
+$linkHoverText: #bb0b0b;
 
-    input: #fff;
-    inputTextIcon: white;
-    inputText: #333;
-    inputLabel: #929292;
-    inputBorder: #ced4da;
-    inputFocusBorder: #bb0b0b;
-    inputFocusShadow: 0 0 0 0.25rem rgb(#bb0b0b, .5);
+$shadow: rgba(0, 0, 0, .25);
+$disable: #ababaa;
 
-    nav: white;
-    navText: #b5b6b7;
-    navActiveText: #04b4e0;
-    navPop: #04b4e0;
-    navPopText: white;
+$input: #fff;
+$inputTextIcon: white;
+$inputText: #333;
+$inputLabel: #929292;
+$inputBorder: #ced4da;
+$inputFocusBorder: #bb0b0b;
+$inputFocusShadow: 0 0 0 0.25rem rgb(#bb0b0b, .5);
 
-    titleText: #333;
-    titleStrongText: #bb0b0b;
+$nav: white;
+$navText: #b5b6b7;
+$navActiveText: #04b4e0;
+$navPop: #04b4e0;
+$navPopText: white;
 
-    copyright: #000;
-    copyrightText: #fff;
+$titleText: #333;
+$titleStrongText: #bb0b0b;
 
-    icon: #bb0b0b;
+$copyright: #000;
+$copyrightText: #fff;
 
-    tag: #04b4e0;
-    tagText: #fff;
-}
-@theme dark {
-    primary: #2e2e2e;
-    primaryText: #eee;
-    primarySubText: #ccc;
-    
-    secondary: #333;
-    secondaryText: white;
+$icon: #bb0b0b;
 
-    third: #666;
-    thirdText: #eee;
+$tag: #04b4e0;
+$tagText: #fff;
 
-    body: #333;
-    bodyText: white;
-    bodySecondaryText: #929292;
+$dark-primary: #2e2e2e;
+$dark-primaryText: #eee;
+$dark-primarySubText: #ccc;
+$dark-secondary: #333;
+$dark-secondaryText: white;
 
-    hover: #404040;
-    hoverText: white;
+$dark-third: #666;
+$dark-thirdText: #eee;
 
-    active: #454545;
-    activeText: white;
+$dark-body: #333;
+$dark-bodyText: white;
+$dark-bodySecondaryText: #929292;
 
-    dialog: #3b3b3b;
-    dialogText: white;
+$dark-hover: #404040;
+$dark-hoverText: white;
 
-    button: transparent;
-    buttonText: #929292;
-    buttonBorder: #6B6B6B;
-    buttonHoverText: white;
-    buttonHover: #404040;
+$dark-active: #454545;
+$dark-activeText: white;
 
-    linkText: #43a1e1;
-    linkHoverText: #43a1e1;
+$dark-dialog: #3b3b3b;
+$dark-dialogText: white;
 
-    shadow: rgba(255, 255, 255, .25);
-    disable: #ababaa;
+$dark-button: transparent;
+$dark-buttonText: #929292;
+$dark-buttonBorder: #6B6B6B;
+$dark-buttonHoverText: white;
+$dark-buttonHover: #404040;
 
-    input: #2b2b2b;
-    inputTextIcon: white;
-    inputText: white;
-    inputLabel: #929292;
-    inputBorder: #6B6B6B;
-    inputFocusBorder: #808080;
-    inputFocusShadow: 0 0 0 1px #808080 inset;
+$dark-linkText: #43a1e1;
+$dark-linkHoverText: #43a1e1;
 
-    nav: #2e2e2e;
-    navText: #929292;
-    navActiveText: white;
-    navPop: #404040;
-    navPopText: white;
+$dark-shadow: rgba(255, 255, 255, .25);
+$dark-disable: #ababaa;
 
-    titleText: #929292;
-    titleStrongText: white;
+$dark-input: #2b2b2b;
+$dark-inputTextIcon: white;
+$dark-inputText: white;
+$dark-inputLabel: #929292;
+$dark-inputBorder: #6B6B6B;
+$dark-inputFocusBorder: #808080;
+$dark-inputFocusShadow: 0 0 0 1px #808080 inset;
 
-    copyright: #404040;
-    copyrightText: #929292;
+$dark-nav: #2e2e2e;
+$dark-navText: #929292;
+$dark-navActiveText: white;
+$dark-navPop: #404040;
+$dark-navPopText: white;
 
-    icon: #929292;
+$dark-titleText: #929292;
+$dark-titleStrongText: white;
 
-    tag: #404040;
-    tagText: #929292;
-}
+$dark-copyright: #404040;
+$dark-copyrightText: #929292;
+
+$dark-icon: #929292;
+
+$dark-tag: #404040;
+$dark-tagText: #929292;

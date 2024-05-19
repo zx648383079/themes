@@ -1,7 +1,7 @@
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .page-box {
         padding: 0;
-        background-color: @body;
+        background-color: var(--#{$prefix}-body);
         border-radius: 0;
         box-shadow: none;
         margin: 0;
@@ -9,7 +9,7 @@
     }
 
     .header {
-        background-color: @primary;
+        background-color: var(--#{$prefix}-primary);
         position: fixed;
         top: 0;
         left: 0;
@@ -23,7 +23,7 @@
             list-style: none;
             a {
                 display: block;
-                color: @primaryText;
+                color: var(--#{$prefix}-primary-text);
                 padding: 12px 0;
                 line-height: 21px;
                 opacity: .7;

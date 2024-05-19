@@ -11,14 +11,14 @@
     .nav-panel {
         left: auto;
         background-color: transparent;
-        color: @bodyText;
+        color: var(--#{$prefix}-body-text);
         .nav-brand,
         .social-bar,
         .copyright {
             padding-right: 0;
         }
         a {
-            color: @bodyText;
+            color: var(--#{$prefix}-body-text);
         }
         .nav-bar {
             text-align: right;
@@ -29,7 +29,7 @@
             }
         }
         .nav-sub-bar {
-            box-shadow: .25rem 0 .25rem .25rem @shadow;
+            box-shadow: .25rem 0 .25rem .25rem var(--#{$prefix}-shadow);
             position: absolute;
             width: 15rem;
             text-align: left;

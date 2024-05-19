@@ -1,17 +1,21 @@
+@import 'functions';
+@import 'mixins';
 @import "theme";
+@import 'root';
+@import 'themeBar';
 
 body {
-    background-color: @body;
-    color: @bodyText;
+    background-color: var(--#{$prefix}-body);
+    color: var(--#{$prefix}-body-text);
     overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-    color: @linkText;
+    color: var(--#{$prefix}-link-text);
     &:hover {
         text-decoration: none;
-        color: @linkHoverText;
+        color: var(--#{$prefix}-link-hover-text);
     }
 }
 
@@ -27,40 +31,40 @@ img {
 }
 
 .btn-default {
-    background-color: @button;
-    color: @buttonText;
-    border-color: @buttonBorder;
+    background-color: var(--#{$prefix}-button);
+    color: var(--#{$prefix}-button-text);
+    border-color: var(--#{$prefix}-button-border);
     &:focus {
-        box-shadow: @inputFocusShadow;
+        box-shadow: var(--#{$prefix}-input-focus-shadow);
     }
     &:hover,
     &.active {
-        background-color: @buttonHover;
-        color: @buttonHoverText;
+        background-color: var(--#{$prefix}-button-hover);
+        color: var(--#{$prefix}-button-hover-text);
     }
 }
 
 
 .form-control {
-    background-color: @input;
-    color: @inputText;
-    border-color: @inputBorder;
+    background-color: var(--#{$prefix}-input);
+    color: var(--#{$prefix}-input-text);
+    border-color: var(--#{$prefix}-input-border);
     &:focus {
-        border-color: @inputFocusBorder;
-        box-shadow: @inputFocusShadow;
+        border-color: var(--#{$prefix}-input-focus-border);
+        box-shadow: var(--#{$prefix}-input-focus-shadow);
     }
 }
 
 .btn-outline-default {
-    color: @button;
-    border-color: @button;
+    color: var(--#{$prefix}-button);
+    border-color: var(--#{$prefix}-button);
     &:focus {
-        box-shadow: @inputFocusShadow;
+        box-shadow: var(--#{$prefix}-input-focus-shadow);
     }
     &:hover,
     &.active {
-        background-color: @button;
-        color: @buttonText;
+        background-color: var(--#{$prefix}-button);
+        color: var(--#{$prefix}-button-text);
     }
 }
 
@@ -75,8 +79,8 @@ img {
 
 .accordion-button {
     &:not(.collapsed) {
-        background-color: @primary;
-        color: @primaryText;
+        background-color: var(--#{$prefix}-primary);
+        color: var(--#{$prefix}-primary-text);
     }
 }
 
@@ -85,9 +89,9 @@ footer,
 .bg-2,
 .bg-4 {
     a {
-        color: @primaryText;
+        color: var(--#{$prefix}-primary-text);
         &:hover {
-            color: @linkHoverText;
+            color: var(--#{$prefix}-link-hover-text);
         }    
     }
 }
@@ -134,13 +138,13 @@ footer,
 
 .search-modal {
     padding: 0;
-    background: @dialog;
+    background: var(--#{$prefix}-dialog);
     .close-btn {
         position: fixed;
         right: 50px;
         top: 50px;
-        background: @button;
-        color: @buttonText;
+        background: var(--#{$prefix}-button);
+        color: var(--#{$prefix}-button-text);
         width: 55px;
         height: 55px;
         line-height: 58px;
@@ -167,7 +171,7 @@ footer,
     .form-control {
         background: none;
         border: none;
-        color: @dialogText;
+        color: var(--#{$prefix}-dialog-text);
         border-bottom: 2px solid rgba(255, 255, 255, 0.2);
         outline: none;
         font-size: 35px;
@@ -187,7 +191,7 @@ footer,
             line-height: 66px;
             background: 0 0;
             border: none;
-            color: @dialogText;
+            color: var(--#{$prefix}-dialog-text);
             outline: 0;
             padding: 0 10px;
             font-size: 2rem;
@@ -200,20 +204,20 @@ footer,
         .input-clear {
             right: 2rem;
             display: none;
-            color: @primarySubText;
+            color: var(--#{$prefix}-primary-sub-text);
         }
     }
     .search-suggestion {
         border-radius: 0 0 10px 10px;
-        background: @secondary;
-        box-shadow: 0 4px 5px 0 @shadow;
+        background: var(--#{$prefix}-secondary);
+        box-shadow: 0 4px 5px 0 var(--#{$prefix}-shadow);
         overflow: hidden;
         width: 100%;
         li {
             line-height: 50px;
             font-size: 14px;
             padding: 0 10px;
-            color: @secondaryText;
+            color: var(--#{$prefix}-secondary-text);
             cursor: pointer;
             list-style: none;
             &:not(:first-of-type) {
@@ -227,10 +231,10 @@ footer,
             font-size: 12px;
             line-height: 30px;
             text-align: center;
-            background: @third;
+            background: var(--#{$prefix}-third);
             margin-right: 10px;
             border-radius: 50%;
-            color: @thirdText;
+            color: var(--#{$prefix}-third-text);
         }
     }
 }
@@ -320,11 +324,11 @@ footer,
     .sub-menu {
         position: absolute;
         top: 100%;
-        background: @body;
+        background: var(--#{$prefix}-body);
         margin: 0;
         padding: 20px 0;
         // display: none;
-        box-shadow: 0 0 20px @shadow;
+        box-shadow: 0 0 20px var(--#{$prefix}-shadow);
         a {
             display: block;
             padding-top: 10px;
@@ -343,7 +347,7 @@ footer,
         .sub-menu {
             left: 100%;
             top: 0;
-            box-shadow: 0 0 20px @shadow;
+            box-shadow: 0 0 20px var(--#{$prefix}-shadow);
         }
     }
     .nav-item {
@@ -355,7 +359,7 @@ footer,
         margin-right: 0;
     }
     &.fixed {
-        background: @body;
+        background: var(--#{$prefix}-body);
         position: fixed;
         z-index: 999;
         margin: 0 auto;
@@ -365,9 +369,9 @@ footer,
         left: 0;
         right: 0;
         width: 100%;
-        box-shadow: 0 0 5px 0 @shadow;
+        box-shadow: 0 0 5px 0 var(--#{$prefix}-shadow);
         a {
-            color: @linkText;
+            color: var(--#{$prefix}-link-text);
         }
     }
 }
@@ -377,7 +381,7 @@ footer,
     left: 100%;
     transition: all 0.8s ease-out 0s;
     position: fixed;
-    background: @body;
+    background: var(--#{$prefix}-body);
     height: 100vh;
     top: 0;
     bottom: 0;
@@ -390,7 +394,7 @@ footer,
 }
 
 .navbar-panel {
-    background: @dialog;
+    background: var(--#{$prefix}-dialog);
     padding: 46px 40px 50px 50px;
     font-size: 1.15em;
     max-width: 480px;
@@ -402,7 +406,7 @@ footer,
     transition: all 0.3s ease;
     position: fixed;
     overflow-y: auto;
-    color: @dialogText;
+    color: var(--#{$prefix}-dialog-text);
     .close-btn {
         position: absolute;
         top: 25px;
@@ -426,7 +430,7 @@ footer,
         display: flex;
         margin-top: 18px;
         .item-icon {
-            color: @icon;
+            color: var(--#{$prefix}-icon);
             font-size: 2rem;
             width: 3rem;
             display: flex;
@@ -436,7 +440,7 @@ footer,
             font-size: 16px;
             line-height: 26px;
             font-weight: 600;
-            color: @dialogText;
+            color: var(--#{$prefix}-dialog-text);
             margin-bottom: 5px;
         }
         em {
@@ -444,7 +448,7 @@ footer,
             font-style: normal;
             line-height: 22px;
             font-size: 15px;
-            color: @dialogText;
+            color: var(--#{$prefix}-dialog-text);
         }
     }
     .icon-group {
@@ -452,7 +456,7 @@ footer,
         li {
             display: inline-block;
             font-size: 15px;
-            color: @dialogText;
+            color: var(--#{$prefix}-dialog-text);
             margin: 0 8px 0 0;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.1);
@@ -461,13 +465,13 @@ footer,
             line-height: 35px;
             border-radius: 0px;
             &:hover {
-                background: @button;
-                color: @buttonText;
+                background: var(--#{$prefix}-button);
+                color: var(--#{$prefix}-button-text);
             }
         }
         a {
             &:hover {
-                color: @buttonText;
+                color: var(--#{$prefix}-button-text);
             }
         }
     }
@@ -511,8 +515,8 @@ footer,
         position: relative;
         z-index: 10;
         .border-line {
-            background-color: @primary;
-            color:  @primaryText;
+            background-color: var(--#{$prefix}-primary);
+            color:  var(--#{$prefix}-primary-text);
             width: 70px;
             height: 8px;
             margin-bottom: 28px;
@@ -591,7 +595,7 @@ footer,
         border: 0;
         width: 65px;
         height: 5px;
-        background: @primary;
+        background: var(--#{$prefix}-primary);
         z-index: 1;
         margin-left: 0;
         left: 0;
@@ -602,7 +606,7 @@ footer,
 .title-bar-2,
 .title-bar {
     .bar-btn {
-        color: @titleStrongText;
+        color: var(--#{$prefix}-title-strong-text);
         font-style: oblique;
     }
     &.center {
@@ -620,7 +624,7 @@ footer,
         font-weight: 600;
         margin: 0 0 10px;
         display: inline-block;
-        color: @primary;
+        color: var(--#{$prefix}-primary);
         line-height: 28px;
         font-size: 15px;
         text-transform: uppercase;
@@ -640,16 +644,16 @@ footer,
 
 .bg-1,
 .bg-3 {
-    background-color: @body;
-    color: @bodyText;
+    background-color: var(--#{$prefix}-body);
+    color: var(--#{$prefix}-body-text);
 }
 
 .bg-2,
 .bg-4,
 .banner-container,
 .banner-1 {
-    background-color: @secondary;
-    color: @secondaryText;
+    background-color: var(--#{$prefix}-secondary);
+    color: var(--#{$prefix}-secondary-text);
 }
 
 .bg-1 {
@@ -764,7 +768,7 @@ footer,
             border: 0;
             width: 65px;
             height: 5px;
-            background: @primary;
+            background: var(--#{$prefix}-primary);
             z-index: 1;
             margin-left: 0;
             left: 0;
@@ -1151,8 +1155,8 @@ footer,
 
 
 .service-floor-3 {
-    background-color: @third;
-    color: @thirdText;
+    background-color: var(--#{$prefix}-third);
+    color: var(--#{$prefix}-third-text);
 }
 .service-floor-2 {
     .services-item {
@@ -1195,7 +1199,7 @@ footer,
             margin-bottom: 7px;
         }
         .fa {
-            color: @icon;
+            color: var(--#{$prefix}-icon);
             font-size: 24px;
             line-height: 31px;
             margin-right: 10px;
@@ -1204,14 +1208,14 @@ footer,
     .comment-block {
         margin-top: 80px;
         .people-comment-item {
-            background-color: @third;
-            color: @thirdText;
+            background-color: var(--#{$prefix}-third);
+            color: var(--#{$prefix}-third-text);
             padding: 40px 20px 40px 20px;
             text-align: center;
             .item-icon {
                 font-size: 3rem;
                 font-weight: 700;
-                color: @icon;
+                color: var(--#{$prefix}-icon);
             }
             .desc {
                 font-size: 20px;
@@ -1269,8 +1273,8 @@ footer,
         margin: 50px 0;
     }
     .inner-box {
-        background-color: @third;
-        color: @thirdText;
+        background-color: var(--#{$prefix}-third);
+        color: var(--#{$prefix}-third-text);
         padding: 35px 30px 45px 30px;
         .title-bar {
             margin-bottom: 55px;
@@ -1347,7 +1351,7 @@ footer,
             width: 70px;
             height: 70px;
             border-radius: 50%;
-            animation: pulseBorder 1500ms ease-out infinite;
+            animation: pulse-border 1500ms ease-out infinite;
             background: #bb0b0b;
         }
     }
@@ -1366,7 +1370,7 @@ footer,
     }
 }
 
-@keyframes pulseBorder {
+@keyframes pulse-border {
     0% {
       transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
       opacity: 1;
@@ -2264,7 +2268,7 @@ footer,
     .item-progress {
         height: 7px;
         line-height: 7px;
-        background-color: @third;
+        background-color: var(--#{$prefix}-third);
         margin: 10px 0 24px;
         position: relative;
         width: 100%;
@@ -2357,7 +2361,7 @@ footer,
         margin-bottom: .75em;
         .comment {
             background: #fff;
-            box-shadow: 0 0 2px 0 @shadow;
+            box-shadow: 0 0 2px 0 var(--#{$prefix}-shadow);
             padding: 15px 10px;
         }
         .comment-content {
@@ -2507,7 +2511,7 @@ footer,
             -webkit-transition: all .3s ease;
             transition: all .3s ease;
             z-index: -1;
-            background: @primary;
+            background: var(--#{$prefix}-primary);
             width: 65px;
             margin: 0 auto;
         }
@@ -2516,7 +2520,7 @@ footer,
         font-size: 18px;
         line-height: 30px;
         font-weight: 500;
-        color: @primaryText;
+        color: var(--#{$prefix}-primary-text);
         text-transform: capitalize;
         display: inline-block;
         margin-top: 10px;
@@ -2551,7 +2555,7 @@ footer,
 .panel {
     background: #fff;
     padding: 40px 30px;
-    box-shadow: 0 6px 25px @shadow;
+    box-shadow: 0 6px 25px var(--#{$prefix}-shadow);
     .panel-header {
         font-size: 20px;
         line-height: 26px;
@@ -2892,8 +2896,8 @@ footer,
     }
     .contact-section {
         flex: 5;
-        background-color: @third;
-        color: @thirdText;
+        background-color: var(--#{$prefix}-third);
+        color: var(--#{$prefix}-third-text);
         padding: 70px 40px 121px;
     }
     .flex-row {
@@ -2913,8 +2917,8 @@ footer,
     }
     .contact-item {
         padding: 35px 35px 35px 35px;
-        background-color: @third;
-        color: @thirdText;
+        background-color: var(--#{$prefix}-third);
+        color: var(--#{$prefix}-third-text);
         margin: 0 -4px 0 0;
         .item-icon {
             img {
@@ -2977,22 +2981,22 @@ footer,
 }
 
 .contact-floor-2 {
-    background-color: @third;
+    background-color: var(--#{$prefix}-third);
 }
 
 .contact-floor-3 {
-    background: @body;
+    background: var(--#{$prefix}-body);
 }
 
 .contact-floor-4 {
-    background: @body;
+    background: var(--#{$prefix}-body);
     padding-top: 100px;
 }
 
 .contact-floor-6 {
-    background-color: @third;
+    background-color: var(--#{$prefix}-third);
     .contact-item {
-        background-color: @body;
+        background-color: var(--#{$prefix}-body);
     }
 }
 
@@ -3009,9 +3013,9 @@ footer,
     }
 }
 .patter-floor-2 {
-    background-color: @body;
+    background-color: var(--#{$prefix}-body);
     .patter-item {
-        background: @body;
+        background: var(--#{$prefix}-body);
         padding: 50px 12px 40px 12px;
         box-shadow: 5px 8px 20px 6px #eee;
         text-align: center;
@@ -3031,8 +3035,8 @@ footer,
     z-index: 999;
     box-shadow: 0 0 2px #54595f;
     transition: all 0.3s ease 0s;
-    background-color: @primary;
-    color: @primaryText;
+    background-color: var(--#{$prefix}-primary);
+    color: var(--#{$prefix}-primary-text);
     i {
         display: flex;
         width: 2.5rem;
@@ -3043,9 +3047,9 @@ footer,
 }
 
 footer {
-    background: @secondary;
+    background: var(--#{$prefix}-secondary);
     background-size: cover;
-    color: @secondaryText;
+    color: var(--#{$prefix}-secondary-text);
 }
 
 .footer-top-bar {
@@ -3065,15 +3069,15 @@ footer {
             font-size: 15px;
             margin-right: 3px;
             transition: all .8s ease;
-            background: @secondary;
+            background: var(--#{$prefix}-secondary);
             width: 35px;
             height: 35px;
             line-height: 35px;
             border-radius: 0;
-            color: @primaryText;
+            color: var(--#{$prefix}-primary-text);
             text-align: center;
             &:hover {
-                background-color: @button;
+                background-color: var(--#{$prefix}-button);
             }
         }
     }
@@ -3081,7 +3085,7 @@ footer {
         font-size: 20px;
         line-height: 30px;
         font-weight: 600;
-        color: @primaryText;
+        color: var(--#{$prefix}-primary-text);
         letter-spacing: 0;
         position: relative;
         margin-bottom: 30px;
@@ -3115,7 +3119,7 @@ footer {
             position: relative;
         }
         i {
-            color: @icon;
+            color: var(--#{$prefix}-icon);
             position: absolute;
             left: 0px;
             font-size: 25px;
@@ -3134,8 +3138,8 @@ footer {
 
 .bottom-bar {
     padding: 20px 0;
-    background: @copyright;
-    color: @copyrightText;
+    background: var(--#{$prefix}-copyright);
+    color: var(--#{$prefix}-copyright-text);
     li {
         display: inline-block;
         position: relative;
@@ -3146,7 +3150,7 @@ footer {
                 content: "";
                 position: absolute;
                 font-size: 18px;
-                background: @primary;
+                background: var(--#{$prefix}-primary);
                 left: 0;
                 top: 50%;
                 width: 6px;
@@ -3164,4 +3168,3 @@ footer {
 @import "768";
 @import "991";
 @import "1200";
-@import "0";

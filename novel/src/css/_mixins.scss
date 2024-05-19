@@ -1,0 +1,33 @@
+@use 'sass:math';
+
+@mixin iconFont($size: 0) {
+    display: inline-block;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: inherit;
+    text-rendering: auto;
+    font-style: normal;
+    @if $size != 0 {
+        font-size: $size;
+    }
+}
+
+@mixin icon($code, $size: 0) {
+    @include iconFont($size);
+    &::before {
+        content: $code;
+    }
+}
+
+@mixin iconArrow($color: #666) {
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0.3125rem;
+        margin-top: -2px;
+        border-top: 5px solid $color;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+    }
+}

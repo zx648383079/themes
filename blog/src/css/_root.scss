@@ -1,0 +1,83 @@
+$isFullyTheme: true !default;
+
+@mixin themeDark() {
+    --#{$prefix}-primary: #{$dark-primary};
+    --#{$prefix}-primary-text: #{$dark-primaryText};
+    --#{$prefix}-secondary: #{$dark-secondary};
+    --#{$prefix}-secondary-text: #{$dark-secondaryText};
+    --#{$prefix}-body: #{$dark-body};
+    --#{$prefix}-body-text: #{$dark-bodyText};
+    --#{$prefix}-body-secondary-text: #{$dark-bodySecondaryText};
+    --#{$prefix}-hover: #{$dark-hover};
+    --#{$prefix}-button: #{$dark-button};
+    --#{$prefix}-button-text: #{$dark-buttonText};
+    --#{$prefix}-button-border: #{$dark-buttonBorder};
+    --#{$prefix}-button-hover-text: #{$dark-buttonHoverText};
+    --#{$prefix}-button-hover: #{$dark-buttonHover};
+    --#{$prefix}-link-text: #{$dark-linkText};
+    --#{$prefix}-shadow: #{$dark-shadow};
+    --#{$prefix}-input-text: #{$dark-inputText};
+    --#{$prefix}-input-label: #{$dark-inputLabel};
+    --#{$prefix}-input-border: #{$dark-inputBorder};
+    --#{$prefix}-nav: #{$dark-nav};
+    --#{$prefix}-nav-text: #{$dark-navText};
+    --#{$prefix}-nav-active-text: #{$dark-navActiveText};
+    --#{$prefix}-nav-pop: #{$dark-navPop};
+    --#{$prefix}-nav-pop-text: #{$dark-navPopText};
+    --#{$prefix}-title-text: #{$dark-titleText};
+    --#{$prefix}-title-strong-text: #{$dark-titleStrongText};
+    --#{$prefix}-copyright: #{$dark-copyright};
+    --#{$prefix}-copyright-text: #{$dark-copyrightText};
+    --#{$prefix}-icon: #{$dark-icon};
+    --#{$prefix}-tag: #{$dark-tag};
+    --#{$prefix}-tag-text: #{$dark-tagText};
+}
+
+@if $isFullyTheme {
+    .theme-dark {
+        @include themeDark();
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            @include themeDark();
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --#{$prefix}-primary: #{$primary};
+        --#{$prefix}-primary-text: #{$primaryText};
+        @if $isFullyTheme {
+            --#{$prefix}-secondary: #{$secondary};
+            --#{$prefix}-secondary-text: #{$secondaryText};
+            --#{$prefix}-body: #{$body};
+            --#{$prefix}-body-text: #{$bodyText};
+            --#{$prefix}-body-secondary-text: #{$bodySecondaryText};
+            --#{$prefix}-hover: #{$hover};
+            --#{$prefix}-button: #{$button};
+            --#{$prefix}-button-text: #{$buttonText};
+            --#{$prefix}-button-border: #{$buttonBorder};
+            --#{$prefix}-button-hover-text: #{$buttonHoverText};
+            --#{$prefix}-button-hover: #{$buttonHover};
+            --#{$prefix}-link-text: #{$linkText};
+            --#{$prefix}-shadow: #{$shadow};
+            --#{$prefix}-input-text: #{$inputText};
+            --#{$prefix}-input-label: #{$inputLabel};
+            --#{$prefix}-input-border: #{$inputBorder};
+            --#{$prefix}-nav: #{$nav};
+            --#{$prefix}-nav-text: #{$navText};
+            --#{$prefix}-nav-active-text: #{$navActiveText};
+            --#{$prefix}-nav-pop: #{$navPop};
+            --#{$prefix}-nav-pop-text: #{$navPopText};
+            --#{$prefix}-title-text: #{$titleText};
+            --#{$prefix}-title-strong-text: #{$titleStrongText};
+            --#{$prefix}-copyright: #{$copyright};
+            --#{$prefix}-copyright-text: #{$copyrightText};
+            --#{$prefix}-icon: #{$icon};
+            --#{$prefix}-tag: #{$tag};
+            --#{$prefix}-tag-text: #{$tagText};
+        }
+    }
+}

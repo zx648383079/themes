@@ -1,0 +1,77 @@
+$isFullyTheme: true !default;
+
+@mixin themeDark() {
+    --#{$prefix}-primary: #{$dark-primary};
+    --#{$prefix}-primary-text: #{$dark-primaryText};
+    --#{$prefix}-primary-sub-text: #{$dark-primarySubText};
+    --#{$prefix}-secondary: #{$dark-secondary};
+    --#{$prefix}-secondary-text: #{$dark-secondaryText};
+    --#{$prefix}-body: #{$dark-body};
+    --#{$prefix}-body-text: #{$dark-bodyText};
+    --#{$prefix}-body-secondary-text: #{$dark-bodySecondaryText};
+    --#{$prefix}-third: #{$dark-third};
+    --#{$prefix}-border: #{$dark-border};
+    --#{$prefix}-hover: #{$dark-hover};
+    --#{$prefix}-active: #{$dark-active};
+    --#{$prefix}-active-text: #{$dark-activeText};
+    --#{$prefix}-button: #{$dark-button};
+    --#{$prefix}-button-text: #{$dark-buttonText};
+    --#{$prefix}-button-border: #{$dark-buttonBorder};
+    --#{$prefix}-button-hover-text: #{$dark-buttonHoverText};
+    --#{$prefix}-button-hover: #{$dark-buttonHover};
+    --#{$prefix}-link-text: #{$dark-linkText};
+    --#{$prefix}-link-hover-text: #{$dark-linkHoverText};
+    --#{$prefix}-shadow: #{$dark-shadow};
+    --#{$prefix}-input: #{$dark-input};
+    --#{$prefix}-input-text: #{$dark-inputText};
+    --#{$prefix}-input-border: #{$dark-inputBorder};
+    --#{$prefix}-input-focus-border: #{$dark-inputFocusBorder};
+    --#{$prefix}-input-focus-shadow: #{$dark-inputFocusShadow};
+    --#{$prefix}-title-text: #{$dark-titleText};
+}
+
+@if $isFullyTheme {
+    .theme-dark {
+        @include themeDark();
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            @include themeDark();
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --#{$prefix}-primary: #{$primary};
+        --#{$prefix}-primary-text: #{$primaryText};
+        @if $isFullyTheme {
+            --#{$prefix}-primary-sub-text: #{$primarySubText};
+            --#{$prefix}-secondary: #{$secondary};
+            --#{$prefix}-secondary-text: #{$secondaryText};
+            --#{$prefix}-body: #{$body};
+            --#{$prefix}-body-text: #{$bodyText};
+            --#{$prefix}-body-secondary-text: #{$bodySecondaryText};
+            --#{$prefix}-third: #{$third};
+            --#{$prefix}-border: #{$border};
+            --#{$prefix}-hover: #{$hover};
+            --#{$prefix}-active: #{$active};
+            --#{$prefix}-active-text: #{$activeText};
+            --#{$prefix}-button: #{$button};
+            --#{$prefix}-button-text: #{$buttonText};
+            --#{$prefix}-button-border: #{$buttonBorder};
+            --#{$prefix}-button-hover-text: #{$buttonHoverText};
+            --#{$prefix}-button-hover: #{$buttonHover};
+            --#{$prefix}-link-text: #{$linkText};
+            --#{$prefix}-link-hover-text: #{$linkHoverText};
+            --#{$prefix}-shadow: #{$shadow};
+            --#{$prefix}-input: #{$input};
+            --#{$prefix}-input-text: #{$inputText};
+            --#{$prefix}-input-border: #{$inputBorder};
+            --#{$prefix}-input-focus-border: #{$inputFocusBorder};
+            --#{$prefix}-input-focus-shadow: #{$inputFocusShadow};
+            --#{$prefix}-title-text: #{$titleText};
+        }
+    }
+}

@@ -1,0 +1,65 @@
+$isFullyTheme: true !default;
+
+@mixin themeDark() {
+    --#{$prefix}-primary: #{$dark-primary};
+    --#{$prefix}-primary-text: #{$dark-primaryText};
+    --#{$prefix}-secondary-text: #{$dark-secondaryText};
+    --#{$prefix}-body: #{$dark-body};
+    --#{$prefix}-body-text: #{$dark-bodyText};
+    --#{$prefix}-panel: #{$dark-panel};
+    --#{$prefix}-panel-text: #{$dark-panelText};
+    --#{$prefix}-hover: #{$dark-hover};
+    --#{$prefix}-hover-text: #{$dark-hoverText};
+    --#{$prefix}-active-text: #{$dark-activeText};
+    --#{$prefix}-dialog: #{$dark-dialog};
+    --#{$prefix}-dialog-text: #{$dark-dialogText};
+    --#{$prefix}-button: #{$dark-button};
+    --#{$prefix}-button-text: #{$dark-buttonText};
+    --#{$prefix}-button-border: #{$dark-buttonBorder};
+    --#{$prefix}-button-hover-text: #{$dark-buttonHoverText};
+    --#{$prefix}-button-hover: #{$dark-buttonHover};
+    --#{$prefix}-link-text: #{$dark-linkText};
+    --#{$prefix}-shadow: #{$dark-shadow};
+    --#{$prefix}-input: #{$dark-input};
+    --#{$prefix}-input-text: #{$dark-inputText};
+}
+
+@if $isFullyTheme {
+    .theme-dark {
+        @include themeDark();
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            @include themeDark();
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --#{$prefix}-primary: #{$primary};
+        --#{$prefix}-primary-text: #{$primaryText};
+        @if $isFullyTheme {
+            --#{$prefix}-secondary-text: #{$secondaryText};
+            --#{$prefix}-body: #{$body};
+            --#{$prefix}-body-text: #{$bodyText};
+            --#{$prefix}-panel: #{$panel};
+            --#{$prefix}-panel-text: #{$panelText};
+            --#{$prefix}-hover: #{$hover};
+            --#{$prefix}-hover-text: #{$hoverText};
+            --#{$prefix}-active-text: #{$activeText};
+            --#{$prefix}-dialog: #{$dialog};
+            --#{$prefix}-dialog-text: #{$dialogText};
+            --#{$prefix}-button: #{$button};
+            --#{$prefix}-button-text: #{$buttonText};
+            --#{$prefix}-button-border: #{$buttonBorder};
+            --#{$prefix}-button-hover-text: #{$buttonHoverText};
+            --#{$prefix}-button-hover: #{$buttonHover};
+            --#{$prefix}-link-text: #{$linkText};
+            --#{$prefix}-shadow: #{$shadow};
+            --#{$prefix}-input: #{$input};
+            --#{$prefix}-input-text: #{$inputText};
+        }
+    }
+}
