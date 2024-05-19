@@ -1,0 +1,68 @@
+@layouts/main
+@title=Blog Article
+
+<div class="router-outline-bar">
+    <div class="container">
+        <div class="router-bar">
+            <div class="router-header">
+                @=title
+            </div>
+            <nav class="breadcrumb router-body" aria-label="breadcrumb">
+                YOU ARE HERE: 
+                <ol>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">
+                        @=title
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row">
+        <div class="col-md-8">
+            
+          <div class="post-large-item">
+            <div class="item-image">
+                <img src="images/banner3.jpg" alt="">
+            </div>
+            <div class="item-meta-bar">
+                <ul class="meta-bar">
+                    <li>April 17, 2015</li>
+                    <li>By <a href="">zre</a></li>
+                    <li>In <a href="">tag</a>, <a href="">tag</a></li>
+                </ul>
+                <ul class="meta-bar">
+                    <li>
+                        <i class="fa fa-commenting"></i>
+                        <a href="">5</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-eye"></i>
+                        <a href="">5000</a>
+                    </li>
+                </ul>
+            </div>
+            <h3 class="item-title">Customer onboarding there business classes</h3>
+            <article class="article-body">
+              <p>1</p> 
+              <p>1</p> 
+              <p>1</p> 
+              <p>1</p> 
+              <p>1</p> 
+              <p>1</p> 
+              <p>1</p> 
+              <p>1</p> 
+            </article>
+        </div>
+
+
+            @layouts/comment
+        </div>
+        <div class="col-md-4">
+            @layouts/blogRight
+        </div>
+    </div>
+</div>

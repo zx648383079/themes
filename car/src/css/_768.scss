@@ -1,0 +1,49 @@
+@media only screen and (min-width: 48rem) {
+    .nav-menu-bar {
+        display: block;
+        a {
+            height: 5.9375rem;
+            line-height: 5.9375rem;
+        }
+        
+        .nav-item {
+            display: inline-block;
+            margin-right: 2rem;
+        }
+        .sub-menu-bar {
+            border: 1px solid var(--#{$prefix}-border);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-0.625rem);
+            transform: scaleY(0);
+            transform-origin: 0 0 0;
+            position: absolute;
+            top: 100%;
+            a {
+                width: 16.25rem;
+            }
+        }
+    }
+    .nav-bar {
+        display: flex;
+        justify-content:space-between;
+        .nav-toggle-btn {
+            display: none;
+        }
+    }
+    .top-bar{
+        display: flex;
+        flex-direction: column;
+    }
+    .two-flat-container {
+        display: flex;
+        .part-item {
+            flex: 1;
+        }
+    }
+    .router-bar {
+        display: flex;
+        align-items: center;
+    }
+
+}

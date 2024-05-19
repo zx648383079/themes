@@ -1,0 +1,193 @@
+@layouts/main
+@title=MARK WHILBERG
+
+<div class="router-outline-bar">
+    <div class="container">
+        <div class="router-bar">
+            <div class="router-header">
+                @=title
+            </div>
+            <nav class="breadcrumb router-body" aria-label="breadcrumb">
+                YOU ARE HERE: 
+                <ol>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">
+                        @=title
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="team-item single-team">
+                <div class="item-thumb">
+                    <img src="images/favicon.png" alt="">
+                    <div class="item-action-bar">
+                        <a href="">
+                            <i class="fab fa-google"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="item-header">
+                    <a href="../team_detail.html" class="item-title">Name</a>
+                    <span class="item-meta">CO-FOUNDER</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel-container">
+                <div class="panel-header">
+                    RESUME
+                </div>
+                <table class="table table-striped team-table">
+                    <tr>
+                        <td>Name: Mark TALY</td>
+                    </tr>
+                    <tr>
+                        <td>Date of birth: 03 May 1999</td>
+                    </tr>
+                    <tr>
+                        <td>Address: 272 pACK</td>
+                    </tr>
+                    <tr>
+                        <td>Email: ADMIN@ZRE.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone: +86 13333333</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel-container">
+                <div class="panel-header">
+                    PROFILE
+                </div>
+                <p>
+                    We offer a full range of garage services to vehicle owners located in Tucson area. All mechanic services are performed by highly qualified mechanics. We can handle any car problem.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="pt-5 pb-5 top-border">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="contact-card-item">
+                    <h5 class="item-header">TURNKEY</h5>
+                    <div class="item-body">
+                        <div class="item-icon">
+                            <i class="fa fa-user-clock"></i>
+                        </div>
+                        <div class="item-meta">
+                            We combine quality workmanship, superior knowledge and low prices.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card-item">
+                    <h5 class="item-header">RESOURCES</h5>
+                    <div class="item-body">
+                        <div class="item-icon">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="item-meta">
+                            We have the experience, personel and resources to make.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card-item">
+                    <h5 class="item-header">SUPPLY</h5>
+                    <div class="item-body">
+                        <div class="item-icon">
+                            <i class="fa fa-tasks"></i>
+                        </div>
+                        <div class="item-meta">
+                            Work with us involves a carefully planned series of steps.
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="secondary-floor pt-5 pb-5">
+    <div class="container">
+        <div class="panel-container">
+            <div class="panel-header">
+                OUR SKILLS
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    @layouts/skillItem@6
+                </div>
+                <div class="col-md-6">
+                    @layouts/skillItem@6
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="panel-container">
+                <div class="panel-header">
+                    MY EXPERIENCE
+                </div>
+                <div class="time-axis">
+                    @layouts/timeline@6
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel-container">
+                <div class="panel-header">
+                    TESTIMONIALS
+                </div>
+                <div class="swiper">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="feedback-item">
+                                <div class="item-body">
+                                    I Have ajajaj
+                                </div>
+                                <div class="item-outline-icon">
+                                    <div class="item-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="item-header">
+                                        <div class="item-title">Name</div>
+                                        <div class="item-meta">CEO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

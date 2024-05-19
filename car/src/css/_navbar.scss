@@ -1,0 +1,176 @@
+.nav-menu-bar {
+    display: none;
+    min-width: 20rem;
+    margin-bottom: 0;
+    a {
+        display: block;
+        transition: all 0.3s ease;
+        font-size: 0.9375rem;
+        font-weight: 600;
+        margin-right: 0.625rem;
+        line-height: 3rem;
+        padding: 0;
+        position: relative;
+    }
+    ul {
+        transition: all .3s ease-in-out;
+    }
+    li {
+        position: relative;
+        list-style: none;
+        &:hover {
+            >.sub-menu-bar {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0px);
+                transform: scaleY(1);
+            }
+        }
+    }
+    .has-child {
+        >a{
+            padding-right: 1.0625rem;
+            &::before {
+                content: "+";
+                position: absolute;
+                left: auto;
+                right: 0;
+                top: 50%;
+                text-align: center;
+                z-index: 9999;
+                font-size: 1rem;
+                display: block;
+                cursor: pointer;
+                transform: translateY(-50%);
+                font-weight: 400;
+            }
+        }
+    }
+    .sub-menu-bar {
+        margin: 0;
+        padding: 0;
+        z-index: 888;
+        background-color: var(--#{$prefix}-body);
+        li {
+            &:not(:last-of-type) {
+                border-bottom: 1px solid var(--#{$prefix}-border);
+            }
+        }
+        a {
+            display: block;
+            padding-top: 0.625rem;
+            padding-bottom: 0.625rem;
+            padding-left: 1.875rem;
+            padding-right: 1.875rem;
+            margin: 0;
+            font-size: 0.875rem;
+            color: var(--#{$prefix}-body-text);
+            font-weight: 500;
+            height: unset;
+            line-height: 1.5625rem;
+            text-transform: capitalize;
+        }
+        .sub-menu-bar {
+            left: 100%;
+            top: 0;
+        }
+    }
+    .opened {
+        >.sub-menu-bar {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0px);
+            transform: scaleY(1);
+        }
+    }
+    .flyout-left {
+        .sub-menu-bar {
+            right: 0;
+            .sub-menu-bar {
+                left: auto;
+                right: 100%;
+            }
+        }
+    }
+    .nav-item {
+        display: block;
+        padding: 0;
+    }
+}
+
+.nav-bar {
+    display: block;
+    position: relative;
+    .nav-brand-logo {
+        font-size: 3rem;
+        color: var(--#{$prefix}-primary);
+        img {
+            max-height: 3.125rem;
+            max-width: 100%;
+        }
+    }
+    a {
+        color: var(--#{$prefix}-secondary-text);
+    }
+    .nav-toggle-btn {
+        margin-right: 0;
+        display: inline-block;
+        width: 2rem;
+        height: 3rem;
+        top: 1rem;
+        right: 0;
+        position: absolute;
+        z-index: 99;
+        span {
+            display: block;
+            width: 2rem;
+            height: 0.3rem;
+            background-color: var(--#{$prefix}-secondary-text);
+            margin-top: .4rem;
+            transition: transform .5s;
+        }
+    }
+}
+.nav-outline-bar {
+    &.fixed {
+        background: var(--#{$prefix}-body);
+        position: fixed;
+        z-index: 999;
+        margin: 0 auto;
+        border: none;
+        padding: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 0 5px 0 var(--#{$prefix}-shadow);
+    }
+    &.nav-sticky {
+        position: sticky;
+        top: 0;
+    }
+    &.nav-opened {
+        .nav-menu-bar {
+            display: block;
+        }
+        .nav-toggle-btn {
+            span {
+                display: none;
+                &:first-of-type,
+                &:last-of-type {
+                    display: block;
+                    position: absolute;
+                    top: .25rem;
+                }
+                &:first-of-type {
+                    transform: rotateZ(45deg);
+                }
+                &:last-of-type {
+                    transform: rotateZ(-45deg);
+                }
+            }
+        }
+    }
+}

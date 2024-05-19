@@ -1,0 +1,61 @@
+.comment-group {
+    margin-top: 1.875rem;
+    .panel-action-group {
+        float: right;
+        font-weight: 400;
+        font-size: .8rem;
+        vertical-align: bottom;
+        a {
+            margin-left: .4rem;
+        }
+        .active {
+            color: var(--#{$prefix}-primary);
+        }
+    }
+    .comment-item {
+        position: relative;
+        margin-bottom: .75em;
+        .comment {
+            background: #fff;
+            box-shadow: 0 0 2px 0 var(--#{$prefix}-shadow);
+            padding: 0.9375rem 0.625rem;
+        }
+        .comment-content {
+            margin: 0.9375rem 0;
+        }
+        .comment-author {
+            img {
+                border-radius: 50%;
+                width: 3em;
+                height: 3em;
+                float: left;
+                margin-right: .75em;
+            }
+            .name {
+                display: block;
+                font-weight: 700;
+            }
+            .date {
+                float: left;
+            }
+            &::after {
+                content: ".";
+                display: block;
+                clear: both;
+                visibility: hidden;
+                line-height: 0;
+                height: 0;
+            }
+        }
+        .comment-footer {
+            position: absolute;
+            top: 1.5em;
+            right: 4.6875375%;
+        }
+        .children {
+            padding-left: 1.5em;
+            border-left: solid 1px #fff;
+            margin: .75em 0;
+        }
+    }
+}

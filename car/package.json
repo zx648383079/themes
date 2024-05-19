@@ -1,5 +1,5 @@
 {
-  "name": "novel",
+  "name": "car",
   "version": "1.0.0",
   "description": "",
   "scripts": {
@@ -10,9 +10,8 @@
   "author": "zodream",
   "license": "MIT",
   "devDependencies": {
-    "@types/js-cookie": "^3.0.3",
     "@types/jquery": "^3.5.16",
-    "gulp-vue2mini": "^1.5.5",
+    "gulp-vue2mini": "^1.5.6",
     "typescript": "^5.4.5"
   }
 }

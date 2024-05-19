@@ -1,0 +1,27 @@
+@layouts/main
+@title=OUR SERVICES STYLE 2
+
+<div class="router-outline-bar">
+    <div class="container">
+        <div class="router-bar">
+            <div class="router-header">
+                @=title
+            </div>
+            <nav class="breadcrumb router-body" aria-label="breadcrumb">
+                YOU ARE HERE: 
+                <ol>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">
+                        @=title
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5 pb-5">
+    <div class="row">
+        @layouts/serviceStyleItem@6
+    </div>
+</div>

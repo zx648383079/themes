@@ -1,0 +1,96 @@
+@layouts/main
+@title=appointment
+
+<div class="map-container">
+
+</div>
+<div class="container">
+    <div class="title-bar">
+        <h1 class="item-header">BOOK AN APPOINTMENT</h1>
+        <div class="item-meta">
+            We are one of the leading auto repair shops serving customers in Tucson.
+            <br/>
+            All mechanic services are performed by highly qualified mechanics.
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4">
+            <div class="input-line-group">
+                <label for="" class="input-header">VEHICLE YEAR</label>
+                <div class="input-body number-control-group">
+                    <input type="range" class="form-range">
+                    <input type="number" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input-line-group">
+                <label for="" class="input-header">VEHICLE MAKE</label>
+                <div class="input-body">
+                    <select class="form-control">
+                        <option value="">Select ...</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="input-line-group">
+                <label for="" class="input-header">VEHICLE MILEAGE</label>
+                <div class="input-body">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-5 mb-5">
+        <div class="col-md-6">
+            <div class="input-line-group">
+                <label for="" class="input-header">PREFFERED DATE OF APPOINTMENT</label>
+                <div class="input-body">
+                    <select class="form-control">
+                        <option value="">Select ...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-line-group mt-5">
+                <label for="" class="input-header">PREFFERED TIME FRAME</label>
+                <div class="input-body">
+                    <select class="form-control">
+                        <option value="">Select ...</option>
+                    </select>
+                </div>
+            </div>
+            <div class="input-line-group mt-5">
+                <label for="" class="input-header">SELECT SERVICES NEEDED</label>
+                <div class="input-body check-control-group">
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="form-check-label">Air</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="form-check-label">Air</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="" class="form-check-label">Air</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="input-line-group">
+                <label for="" class="input-header">CONTACT DETAILS</label>
+                <div class="input-body">
+                    <input class="form-control" name="name" type="text" placeholder="Your Name *">
+                    <input class="form-control mt-3" name="email" type="text" placeholder="Your Email *">
+                    <input class="form-control mt-3" name="phone" type="text" placeholder="Your Phone">
+                    <textarea name="message" placeholder="Message *" class="form-control" rows="7"></textarea>
+                </div>
+            </div>
+
+            <button class="btn btn-primary input-line-btn">SUBMIT NOW</button>
+        </div>
+    </div>
+</div>

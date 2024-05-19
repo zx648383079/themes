@@ -1,0 +1,252 @@
+@layouts/main
+@title=Home
+
+<div class="banner-container">
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image: url(images/banner1.jpg);">
+                <div class="banner-item-icon" data-swiper-parallax="-100">
+                    <i class="fa fa-user"></i>
+                </div>
+                <a href="" class="banner-item-title" data-swiper-parallax="-200">
+                    <h2>好好</h2>
+                </a>
+                <div class="banner-item-meta" data-swiper-parallax="-300">
+                    lamdlkmakla 
+                </div>
+                <div class="banner-item-action" data-swiper-parallax="-400">
+                    <a class="btn btn-outline-primary">查看</a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(images/banner2.jpg);">
+                <div class="banner-item-icon" data-swiper-parallax="-100">
+                    <i class="fa fa-cog"></i>
+                </div>
+                <a href="" class="banner-item-title" data-swiper-parallax="-200">
+                    <h2>好好</h2>
+                </a>
+                <div class="banner-item-meta" data-swiper-parallax="-300">
+                    lamdlkmakla 
+                </div>
+                <div class="banner-item-action" data-swiper-parallax="-400">
+                    <a class="btn btn-outline-primary">查看</a>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-image: url(images/banner3.jpg);">
+                <div class="banner-item-icon" data-swiper-parallax="-100">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <a href="" class="banner-item-title" data-swiper-parallax="-200">
+                    <h2>好好</h2>
+                </a>
+                <div class="banner-item-meta" data-swiper-parallax="-300">
+                    lamdlkmakla 
+                </div>
+                <div class="banner-item-action" data-swiper-parallax="-400">
+                    <a class="btn btn-outline-primary">查看</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
+
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="top-card-item">
+                <div class="item-icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="item-header">
+                    EVERY JOB IS PERSONAL
+                </div>
+                <div class="item-body">
+                    If you want the quality you would expect from the dealership, but with a more personal and friendly atmosphere, you have found it.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="top-card-item">
+                <div class="item-icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="item-header">
+                    EVERY JOB IS PERSONAL
+                </div>
+                <div class="item-body">
+                    If you want the quality you would expect from the dealership, but with a more personal and friendly atmosphere, you have found it.
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="top-card-item">
+                <div class="item-icon">
+                    <i class="fa fa-user"></i>
+                </div>
+                <div class="item-header">
+                    EVERY JOB IS PERSONAL
+                </div>
+                <div class="item-body">
+                    If you want the quality you would expect from the dealership, but with a more personal and friendly atmosphere, you have found it.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="two-flat-container secondary-floor">
+    <div class="part-item p-5">
+        <div class="title-bar mb-3">
+            <h1 class="item-header">WHAT WE DO</h1>
+            <div class="item-meta">We offer a full range of garage services to vehicle owners located in Tucson area. All mechanic services are performed by highly qualified mechanics.
+            </div>
+        </div>
+        <div class="check-line-item">
+            Engine Diagnostics
+        </div>
+        <div class="check-line-item">
+            Engine Diagnostics
+        </div>
+        <div class="check-line-item">
+            Engine Diagnostics
+        </div>
+        <div class="check-line-item">
+            Engine Diagnostics
+        </div>
+        <a href="" class="btn btn-primary">OUR SERVICES</a>
+    </div>
+    <div class="part-item image-part-item">
+        <img src="images/banner1.jpg" alt="">
+    </div>
+    <div class="part-item p-5">
+        <div class="title-bar">
+            <h1 class="item-header">OUR SKILLS</h1>
+            <div class="item-meta">We offer full range of garage services to vehicle owners in Tucson. Our professionals know how to handle a wide range of car services.
+            </div>
+        </div>
+        @layouts/skillItem@6
+    </div>
+</div>
+<div class="container pt-5 pb-5">
+    <div class="title-bar">
+        <h1 class="item-header">RECENT NEWS</h1>
+        <div class="item-meta">We offer a full range of garage services to vehicle owners located in Tucson area.
+            <br>
+            All mechanic services are performed by highly qualified mechanics. We can handle any car problem.
+        </div>
+    </div>
+
+    <div class="swiper blog-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                @layouts/blogItem
+            </div>
+            <div class="swiper-slide">
+                @layouts/blogItem
+            </div>
+            <div class="swiper-slide">
+                @layouts/blogItem
+            </div>
+            <div class="swiper-slide">
+                @layouts/blogItem
+            </div>
+            <div class="swiper-slide">
+                @layouts/blogItem
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="text-center mt-3">
+        <a href="services.html" class="btn btn-outline-primary">VIEW ALL SERVICES</a>
+    </div>
+</div>
+
+<div class="secondary-floor pt-5 pb-5">
+    <div class="container">
+        <div class="title-bar">
+            <h1 class="item-header">OUR SERVICES</h1>
+            <div class="item-meta">
+                We offer a full range of garage services to vehicle owners located in Tucson area.
+                Our professinals know how to handle a wide range of car services.
+            </div>
+        </div>
+        <div class="row mt-5">
+            @layouts/serviceStyleItem@6
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="services.html" class="btn btn-outline-primary">VIEW ALL SERVICES</a>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel-container">
+                <div class="panel-header">
+                    TESTIMONIALS
+                </div>
+                <div class="swiper">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="feedback-item">
+                                <div class="item-body">
+                                    I Have ajajaj
+                                </div>
+                                <div class="item-outline-icon">
+                                    <div class="item-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="item-header">
+                                        <div class="item-title">Name</div>
+                                        <div class="item-meta">CEO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel-container">
+                <div class="panel-header">
+                    WE WORK WITH
+                </div>
+                <div class="team-row">
+                    @layouts/partnerItem@6
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="secondary-floor pt-5 pb-5">
+    <div class="container">
+        <div class="title-bar">
+            <h1 class="item-header">MEET OUR TEAM</h1>
+            <div class="item-meta">
+                We are a friendly, helpful and professional group of people.
+                <br>
+                Our professionals know how to handle a wide range of car services.
+            </div>
+        </div>
+        <div class="team-row">
+            @layouts/teamItem@6
+        </div>
+
+        <div class="text-center mt-3">
+            <a href="services.html" class="btn btn-outline-primary">VIEW ALL SERVICES</a>
+        </div>
+    </div>
+</div>
+

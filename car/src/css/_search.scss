@@ -1,0 +1,110 @@
+.search-modal {
+    padding: 0;
+    background-color: var(--#{$prefix}-dialog);
+    ul,
+    li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .close-btn {
+        position: fixed;
+        right: 50px;
+        top: 50px;
+        background-color: var(--#{$prefix}-primary);
+        color: var(--#{$prefix}-primary-text);
+        width: 55px;
+        height: 55px;
+        line-height: 58px;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: all .5s ease;
+        opacity: unset;
+        box-shadow: unset;
+        border: none;
+        z-index: 9;
+    }
+    .modal-body {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .form-control {
+        background: none;
+        border: none;
+        color: var(--#{$prefix}-dialog-text);
+        border-bottom: 2px solid var(--#{$prefix}-secondary);
+        outline: none;
+        font-size: 35px;
+        padding-right: 4rem;
+    }
+    .search-body {
+        width: 100%;
+        max-width: 30rem;
+    }
+    .search-input {
+        position: relative;
+        .input-clear,
+        .input-search {
+            position: absolute;
+            top: 0;
+            width: 3.125rem;
+            line-height: 4.125rem;
+            background: 0 0;
+            border: none;
+            color: var(--#{$prefix}-secondary-text);
+            outline: 0;
+            padding: 0 10px;
+            font-size: 2rem;
+            right: 0;
+        }
+        button {
+            background: transparent;
+            border: none;
+        }
+        .input-clear {
+            right: 2rem;
+            display: none;
+        }
+    }
+    .search-suggestion {
+        border-radius: 0 0 0.625rem 0.625rem;
+        background-color: var(--#{$prefix}-secondary);
+        box-shadow: 0 0.25rem 0.3125rem 0 var(--#{$prefix}-shadow);
+        overflow: hidden;
+        width: 100%;
+        li {
+            line-height: 3.125rem;
+            font-size: 0.875rem;
+            padding: 0 0.625rem;
+            color: var(--#{$prefix}-secondary-text);
+            cursor: pointer;
+            list-style: none;
+            &:not(:first-of-type) {
+                border-top: 1px solid var(--#{$prefix}-border);
+            }
+            &:hover {
+                background-color: var(--#{$prefix}-hover);
+            }
+        }
+        span {
+            display: inline-block;
+            width: 1.875rem;
+            height: 1.875rem;
+            font-size: 0.75rem;
+            line-height: 1.875rem;
+            text-align: center;
+            background: var(--#{$prefix}-gray);
+            margin-right: 0.625rem;
+            border-radius: 50%;
+            color: var(--#{$prefix}-gray-text);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@layouts/main
+@title=RECENT GALLERIES
+
+<div class="router-outline-bar">
+    <div class="container">
+        <div class="router-bar">
+            <div class="router-header">
+                @=title
+            </div>
+            <nav class="breadcrumb router-body" aria-label="breadcrumb">
+                YOU ARE HERE: 
+                <ol>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">
+                        @=title
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5 pb-5">
+    <div class="tag-bar cat-tag-bar">
+        <a href="" class="active">All</a>
+        <a href="">One</a>
+        <a href="">One</a>
+        <a href="">One</a>
+        <a href="">One</a>
+    </div>
+
+    <div class="row mt-5">
+        @layouts/galleryItem@12
+    </div>
+</div>

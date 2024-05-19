@@ -1,0 +1,90 @@
+@layouts/main
+@title=Team
+
+<div class="router-outline-bar">
+    <div class="container">
+        <div class="router-bar">
+            <div class="router-header">
+                @=title
+            </div>
+            <nav class="breadcrumb router-body" aria-label="breadcrumb">
+                YOU ARE HERE: 
+                <ol>
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">
+                        @=title
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5 pb-5">
+    <div class="team-row">
+        @layouts/teamItem@6
+    </div>
+</div>
+
+<div class="secondary-floor pt-5 pb-5">
+    <div class="container">
+        <div class="panel-container">
+            <div class="panel-header">
+                OUR SKILLS
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    @layouts/skillItem@6
+                </div>
+                <div class="col-md-6">
+                    @layouts/skillItem@6
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-5 pb-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel-container">
+                <div class="panel-header">
+                    TESTIMONIALS
+                </div>
+                <div class="swiper">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="feedback-item">
+                                <div class="item-body">
+                                    I Have ajajaj
+                                </div>
+                                <div class="item-outline-icon">
+                                    <div class="item-icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                    <div class="item-header">
+                                        <div class="item-title">Name</div>
+                                        <div class="item-meta">CEO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel-container">
+                <div class="panel-header">
+                    WE WORK WITH
+                </div>
+                <div class="team-row">
+                    @layouts/partnerItem@6
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

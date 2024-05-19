@@ -1,0 +1,95 @@
+@@ 主题切换按钮
+
+<div class="theme-dialog-panel">
+    <div class="panel-toggle-btn">
+        <i class="fa fa-cog"></i>
+    </div>
+    <div class="panel-container">
+        <div class="panel-header">
+            Theme Selector
+        </div>
+        <div class="panel-body">
+            <div class="input-group">
+                <label for="">Menu Type</label>
+                <select name="menu_type">
+                    <option value="static">Default</option>
+                    <option value="sticky">Sticky</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="">Layout Style</label>
+                <select name="layout_style">
+                    <option value="wide">Wide</option>
+                    <option value="boxed">Boxed</option>
+                </select>
+            </div>
+            <div class="input-line-group">
+                <label for="">Boxed Layout Pattern</label>
+                <div class="grid-option-bar">
+                    <a title="默认主题"></a>
+                    <a title="深色主题"></a>
+                </div>
+            </div>
+            <div class="input-line-group">
+                <label for="">Boxed Layout Image</label>
+                <div class="grid-option-bar">
+                    <a title="默认主题">
+                        <img src="" alt="">
+                    </a>
+                    <a title="深色主题">
+                        <img src="" alt="">
+                    </a>
+                </div>
+                <div class="mt-gap">
+                    <input type="checkbox" name="" id="">
+                    <label for="">overlay</label>
+                </div>
+            </div>
+            <div class="input-line-group">
+                <label for="">Theme Color</label>
+                <div class="theme-bar">
+                    <a class="theme-default" title="默认主题"></a>
+                    <a class="theme-dark" title="深色主题"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script lang="ts">
+    $(function () {
+        const theme = localStorage.getItem('t');
+        $('.theme-dialog-panel').on('click', '.panel-toggle-btn', function() {
+            $(this).closest('.theme-dialog-panel').toggleClass('opened');
+        }).on('change', 'select[name=layout_style]', function () {
+            $('.main-container').toggleClass('boxed', $(this).val() === 'boxed');
+        }).on('change', 'select[name=menu_type]', function() {
+            $('.nav-outline-bar').toggleClass('nav-sticky', $(this).val() === 'sticky');
+        });
+        const themeItems = $('.theme-bar a').on('click', function (e) {
+            e.preventDefault();
+            toggleTheme(this.classList[0]);
+        });
+        const toggleTheme = (cls) => {
+            const items = document.body.classList;
+            items.forEach(v => {
+                if (v.indexOf('theme-') === 0) {
+                    document.body.classList.remove(v);
+                }
+            });
+            localStorage.setItem('t', cls);
+            themeItems.each(function() {
+                $(this).toggleClass('active', this.classList[0] == cls);
+            });
+            if (cls === 'theme-default') {
+                return;
+            }
+            document.body.classList.add(cls);
+        };
+        if (theme) {
+            toggleTheme(theme);
+        } else {
+            themeItems.eq(0).trigger('click');
+        }
+    });
+</script>
