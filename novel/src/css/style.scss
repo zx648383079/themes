@@ -32,6 +32,20 @@ a {
     display: inline-block;
 }
 
+.star-control-bar {
+    display: inline-block;
+    margin-top: .4rem;
+    i {
+        font-size: 2rem;
+        color: var(--#{$prefix}-primary);
+    }
+    label {
+        font-size: 1rem;
+        vertical-align: bottom;
+        color: var(--#{$prefix}-secondary-text);
+    }
+}
+
 .header {
     .top-nav-bar {
         background: var(--#{$prefix}-panel);
@@ -118,6 +132,10 @@ a {
 .table {
     --bs-table-hover-color: var(--#{$prefix}-panel-text);
     color: var(--#{$prefix}-panel-text);
+}
+
+.novel-table {
+    margin-bottom: 0;
 }
 
 .footer {

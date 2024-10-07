@@ -206,4 +206,21 @@ function bindReader() {
 $(function() {
     bindSwiper();
     bindReader();
+    $(document).on('click', '.star-control-bar i', function() {
+        const $this = $(this);
+        const box = $this.closest('.star-control-bar');
+        let checked = true;
+        let score = 0;
+        box.find('i').each(function() {
+            const item = $(this);
+            item.toggleClass('fa', checked).toggleClass('far', !checked);
+            if (checked) {
+                score ++;
+            }
+            if (checked && item.is($this)) {
+                checked = false;
+            }
+        });
+        box.find('label').text(score.toFixed(1));
+    });
 });
