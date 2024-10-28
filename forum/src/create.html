@@ -1,0 +1,91 @@
+@layouts/main
+@title=create topic
+
+<div class="container">
+    <div class="panel-container">
+        <div class="panel-header">
+            <i class="fa fa-edit"></i>
+            Create New Thread
+        </div>
+
+        <div class="panel-body">
+            <div class="mb-3">
+                <label for="" class="form-label">Thread Title</label>
+                <input type="text" class="form-control"/>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="" class="form-label">Select Category</label>
+                    <select class="form-control">
+
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="" class="form-label">Select Sub Category</label>
+                    <select class="form-control">
+
+                    </select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Description</label>
+                <textarea class="form-control" rows="10"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Add Tags</label>
+                <input type="text" class="form-control"/>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="" class="form-label">Who can see this?</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Everyone</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox2">Only Friends</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="" class="form-label">Share on Social?</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">
+                                <i class="fab fa-google"></i>
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox2">
+                                <i class="fab fa-facebook"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="" class="form-label">Is this a Mature Thread?</label>
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">Yes</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox2">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="btn-group">
+                <div class="btn btn-secondary">Cancel</div>
+                <div class="btn btn-primary">Create Thread</div>
+            </div>
+        </div>
+    </div>
+</div>

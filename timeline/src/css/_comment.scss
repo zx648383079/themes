@@ -1,0 +1,46 @@
+.comment-item {
+    position: relative;
+    margin-bottom: .75em;
+    .comment {
+        background: var(--#{$prefix}-secondary);
+        box-shadow: 0 0 2px 0 var(--#{$prefix}-shadow);
+        padding: 15px 10px;
+    }
+    .comment-content {
+        margin: 15px 0;
+    }
+    .comment-author {
+        img {
+            border-radius: 50%;
+            width: 3em;
+            height: 3em;
+            float: left;
+            margin-right: .75em;
+        }
+        .name {
+            display: block;
+            font-weight: 700;
+        }
+        .date {
+            float: left;
+        }
+        &::after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+    }
+    .comment-footer {
+        position: absolute;
+        top: 1.5em;
+        right: 4.6875375%;
+    }
+    .children {
+        padding-left: 1.5em;
+        border-left: solid 1px var(--#{$prefix}-secondary);
+        margin: .75em 0;
+    }
+}

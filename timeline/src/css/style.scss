@@ -1,0 +1,100 @@
+@import 'functions';
+@import 'mixins';
+@import "theme";
+@import 'root';
+@import 'themeBar';
+
+
+
+body {
+    background-color: var(--#{$prefix}-body);
+    color: var(--#{$prefix}-body-text);
+}
+
+a {
+    color: var(--#{$prefix}-link-text);
+    text-decoration: none;
+    transition: .1s ease-in-out;
+    &:link,
+    &:visited {
+        color: var(--#{$prefix}-link-text);
+    }
+}
+
+.header {
+    .top-nav-bar {
+        background: var(--#{$prefix}-panel);
+        border-bottom: 1px solid var(--#{$prefix}-shadow);
+        display: block;
+        margin-bottom: 1.25rem;
+        a {
+            display: inline-block;
+            line-height: 2.25rem;
+            padding: 0 1.25rem 0 0;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--#{$prefix}-panel-text);
+            &:hover {
+                color: var(--#{$prefix}-hover-text);
+                text-decoration: none;
+            }
+        }
+    }
+    .main-nav-bar {
+        line-height: 2.5rem;
+        background-color: var(--#{$prefix}-primary);
+        color: var(--#{$prefix}-primary-text);
+        a {
+            color: var(--#{$prefix}-primary-text);
+            &:hover {
+                color: var(--#{$prefix}-primary-text);
+            }
+        }
+    }
+    .nav-item {
+        min-width: 5rem;
+        padding-left: .4rem;
+        position: relative;
+        display: inline-block;
+    }
+}
+
+.footer {
+    background: var(--#{$prefix}-primary);
+    color: var(--#{$prefix}-primary-text);
+    padding: 20px 0 15px 0;
+    margin-top: 1.875em;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+    margin: 1rem 0;
+    .form-control {
+        background-color: var(--#{$prefix}-input);
+        color: var(--#{$prefix}-input-text);
+    }
+    .form-control,
+    .btn {
+        border-radius: 0;
+        margin: 0;
+    }
+    .form-control:first-child {
+        position: relative;
+        flex: 1 1 auto;
+        width: 1%;
+        margin-bottom: 0;
+        border-radius: .25rem 0 0 .25rem;
+    }
+    .btn:last-child {
+        display: flex;
+        border-radius: 0 .25rem .25rem 0;
+    }
+}
+
+@import 'timeline';
+@import 'comment';
+@import '767';

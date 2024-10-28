@@ -1,0 +1,195 @@
+$prefix: 'zre' !default;
+
+$primary: #04b4e0;
+$primaryText: #fff;
+
+$secondary: #e9ecee;
+$secondaryText: #999;
+
+$body: #f4f4f4;
+$bodyText: #333;
+$panel: #fff;
+$panelText: #333;
+
+$hover: #404040;
+$hoverText: #04b4e0;
+
+$active: #454545;
+$activeText: #04b4e0;
+
+$dialog: white;
+$dialogText: #888;
+
+$button: transparent;
+$buttonText: #666;
+$buttonBorder: #04b4e0;
+$buttonHoverText:  white;
+$buttonHover: #04b4e0;
+
+$linkText: #43a1e1;
+
+$shadow: rgba(0, 0, 0, .25);
+$disable: #ababaa;
+
+$input: white;
+$inputTextIcon: white;
+$inputText: #333;
+$inputLabel: #929292;
+$inputBorder: #04b4e0;
+$inputFocusBorder: #808080;
+$inputFocusShadow: 0 0 0 1px #808080 inset;
+
+$nav: #04b4e0;
+$navText: #fff;
+$navActiveText: white;
+$navHover: #04b4e0;
+$navHoverText: white;
+
+$titleText: #333;
+$titleSecondaryText: #04b4e0;
+
+$copyright: #f2f2f2;
+$copyrightText: #999;
+
+$icon: #04b4e0;
+
+$tag: #04b4e0;
+$tagText: #fff;
+
+$tab: white;
+$tabText: #767676;
+$tabBorder: rgba(0, 0, 0, .1);
+$tabActiveBorder: #04b4e0;
+$tabActiveText: #04b4e0;
+$tabActive: #eee;
+
+
+$dark-primary: #2e2e2e;
+$dark-primaryText: #eee;
+$dark-secondary: #333;
+$dark-secondaryText: white;
+
+$dark-body: #333;
+$dark-bodyText: white;
+$dark-panel: #2e2e2e;
+$dark-panelText: #929292;
+
+$dark-hover: #404040;
+$dark-hoverText: white;
+
+$dark-active: #454545;
+$dark-activeText: white;
+
+$dark-dialog: #3b3b3b;
+$dark-dialogText: white;
+
+$dark-button: transparent;
+$dark-buttonText: #929292;
+$dark-buttonBorder: #6B6B6B;
+$dark-buttonHoverText: white;
+$dark-buttonHover: #404040;
+
+$dark-linkText: #43a1e1;
+
+$dark-shadow: rgba(255, 255, 255, .25);
+$dark-disable: #ababaa;
+
+$dark-input: #2b2b2b;
+$dark-inputTextIcon: white;
+$dark-inputText: white;
+$dark-inputLabel: #929292;
+$dark-inputBorder: #6B6B6B;
+$dark-inputFocusBorder: #808080;
+$dark-inputFocusShadow: 0 0 0 1px #808080 inset;
+
+$dark-nav: #2e2e2e;
+$dark-navText: #929292;
+$dark-navActiveText: white;
+$dark-navHover: #404040;
+$dark-navHoverText: white;
+
+$dark-titleText: #929292;
+$dark-titleSecondaryText: white;
+
+$dark-copyright: #404040;
+$dark-copyrightText: #929292;
+
+$dark-icon: #929292;
+
+$dark-tag: #404040;
+$dark-tagText: #929292;
+
+$dark-tab: #333;
+$dark-tabText: #eee;
+$dark-tabBorder: rgba(0, 0, 0, .1);
+$dark-tabActiveBorder: #fff;
+$dark-tabActiveText: #fff;
+$dark-tabActive: #2e2e2e;
+
+
+$mono-primary: #242424;
+$mono-primaryText: #fff;
+
+$mono-secondary: #f2f2f2;
+$mono-secondaryText: #999;
+
+$mono-body: #f4f4f4;
+$mono-bodyText: #333;
+$mono-panel: #fff;
+$mono-panelText: #888;
+
+$mono-hover: #404040;
+$mono-hoverText: white;
+
+$mono-active: #454545;
+$mono-activeText: white;
+
+$mono-dialog: white;
+$mono-dialogText: #888;
+
+$mono-button: transparent;
+$mono-buttonText: #666;
+$mono-buttonBorder: #04b4e0;
+$mono-buttonHoverText:  white;
+$mono-buttonHover: #04b4e0;
+
+$mono-linkText: #333;
+
+$mono-shadow: rgba(0, 0, 0, .25);
+$mono-disable: #ababaa;
+
+$mono-input: transparent;
+$mono-inputTextIcon: white;
+$mono-inputText: #333;
+$mono-inputLabel: #929292;
+$mono-inputBorder: #04b4e0;
+$mono-inputFocusBorder: #808080;
+$mono-inputFocusShadow: 0 0 0 1px #808080 inset;
+
+$mono-nav: #363636;
+$mono-navText: white;
+$mono-navActiveText: #04b4e0;
+$mono-navHover: #000;
+$mono-navHoverText: white;
+
+$mono-titleText: #333;
+$mono-titleSecondaryText: #d4d4d4;
+
+$mono-copyright: #f2f2f2;
+$mono-copyrightText: #999;
+
+$mono-icon: #04b4e0;
+
+$mono-tag: #333;
+$mono-tagText: #999;
+
+$mono-tab: #f4f4f4;
+$mono-tabText: #767676;
+$mono-tabBorder: rgba(0, 0, 0, .1);
+$mono-tabActiveBorder: #333;
+$mono-tabActiveText: #333;
+$mono-tabActive: #fff;
+
+
+$colorHoverOffset: 30%; // Hover 颜色加深程度
+$colorActiveOffset: 20%; // 点击后 颜色加深程度

@@ -1,0 +1,27 @@
+@layouts/main
+@title=首页
+
+
+<div class="container">
+    <div class="tab-header-bar">
+        @layouts/router
+    </div>
+
+
+    <div class="post-container">
+        <div class="post-table-header">
+            <div class="item-topic">Topic</div>
+            <div class="item-category">Category</div>
+            <div class="item-user">Users</div>
+            <div class="item-reply">Replies</div>
+            <div class="item-view">Views</div>
+            <div class="item-time">Activity</div>
+        </div>
+        <div class="post-table-body">
+            @layouts/item-pin@2
+            @layouts/item@10
+        </div>
+    </div>
+
+    @layouts/page
+</div>

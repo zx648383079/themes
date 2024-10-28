@@ -1,0 +1,115 @@
+@layouts/main
+@title=详情页
+
+<div class="container">
+    <div class="tab-header-bar">
+        @layouts/router
+
+        <div class="router-bar">
+            <span>Thread Navigation:</span>
+            <a href="">
+                <i class="fa fa-chevron-left"></i>
+                Previous
+                </a>
+            <a href="">
+                Next
+                <i class="fa fa-chevron-right"></i>
+                </a>
+        </div>
+    </div>
+
+
+    <div class="title-container">
+        <div class="item-title">
+            Which movie have you watched most recently?
+        </div>
+        <div class="item-category">
+            <a href="" class="cat-dot-item">
+                <i class="dot"></i>
+                Politics
+            </a>
+        </div>
+
+        <div class="item-tag-bar tag-bar">
+            <a href="">selfie</a>
+            <a href="" class="btn-success">selfie</a>
+            <a href="" class="btn-primary">selfie</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-9">
+            @layouts/topic-item-main
+
+            @layouts/topic-item@10
+
+            @layouts/topic-item-hide
+
+            <div class="topic-action-bar">
+                <div class="panel-header">
+                    <i class="fa fa-circle-left"></i>
+                    This topic will close 6 months after the last reply.
+                </div>
+                <div class="panel-body">
+                    <a href="" class="btn btn-default">
+                        <i class="fa fa-tag"></i>
+                        Bookmark
+                    </a>
+                    <a href="" class="btn btn-default">
+                        <i class="fa fa-share"></i>
+                        Share
+                    </a>
+                    <a href="" class="btn btn-default">
+                        <i class="fa fa-flag"></i>
+                        Flag
+                    </a>
+                    <a href="" class="btn btn-default">
+                        <i class="fa fa-user-add"></i>
+                        Invite
+                    </a>
+                    <a href="" class="btn btn-default">
+                        <i class="fa fa-circle"></i>
+                        Track
+                    </a>
+                    <a href="" class="btn btn-info">
+                        <i class="fa fa-reply"></i>
+                        Reply
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="calendar-bar">
+                <div class="calendar-header">
+                    <a class="item-icon">
+                        <i class="fa fa-calendar"></i>
+                    </a>
+                </div>
+                <div class="calendar-body">
+                    <div class="calendar-item">
+                        <div class="item-meta">
+                            Jun 12
+                        </div>
+                    </div>
+                    <div class="calendar-item active">
+                        <div class="item-title">
+                            31 / 75
+                        </div>
+                        <div class="item-meta">
+                            Jun 12
+                        </div>
+                    </div>
+                    <div class="calendar-item">
+                        <div class="item-meta">
+                            6h ago
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-footer">
+                    <a href="" class="btn-secondary"><i class="fa fa-circle"></i></a>
+                    <a href="" class="btn-success"><i class="fa fa-reply"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
